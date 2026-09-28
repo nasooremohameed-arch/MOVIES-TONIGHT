@@ -5,157 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MOVIES TONIGHT - Movies, series and unforgettable nights.">
     <title>MOVIES TONIGHT</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header class="header">
-
     <div class="logo">
         <span class="logo-icon">M</span>
-        <span>MOVIES TONIGHT</span>
+        <span data-i18n="brand">MOVIES TONIGHT</span>
     </div>
-
     <nav class="nav">
-        <a href="#" class="nav-link active" data-page="moviesPage">Movies</a>
-        <a href="#" class="nav-link" data-page="seriesPage">Series</a>
-        <a href="#" class="nav-link" data-page="togetherPage">Watch Together</a>
+        <a href="#" class="nav-link active" data-page="moviesPage" data-i18n="movies">Movies</a>
+        <a href="#" class="nav-link" data-page="seriesPage" data-i18n="series">Series</a>
+        <a href="#" class="nav-link" data-page="togetherPage" data-i18n="watchTogether">Watch Together</a>
     </nav>
-
     <div class="right-menu">
-
-        <!-- THEME BUTTON -->
-        <button
-            id="themeToggle"
-            class="profile-button theme-button"
-            type="button"
-            aria-label="Change theme"
-        >
-            <span id="themeIcon">☾</span>
-            <span id="themeText">Night</span>
-        </button>
-
         <button id="profileButton" class="profile-button" type="button">
             <span class="profile-icon">👤</span>
-            <span>Profile</span>
+            <span data-i18n="profile">Profile</span>
         </button>
-
     </div>
-
 </header>
-
-
 <main>
-
-    <!-- =========================
-         MOVIES PAGE
-    ========================== -->
-
+    <!-- MOVIES PAGE -->
     <section class="page active-page" id="moviesPage">
-
         <section class="hero">
-
             <div class="hero-overlay"></div>
-
             <div class="hero-content">
-
-                <span class="hero-label">WELCOME TO</span>
-
+                <span class="hero-label" data-i18n="welcome">WELCOME TO</span>
                 <h1>MOVIES <span>TONIGHT</span></h1>
-
-                <p>
+                <p data-i18n="heroDescription">
                     Your place for movies, series and unforgettable nights.
                     Discover something amazing to watch tonight.
                 </p>
-
                 <div class="hero-buttons">
-
                     <button class="main-button" id="startWatching" type="button">
-                        ▶ Start Watching
+                        ▶ <span data-i18n="startWatching">Start Watching</span>
                     </button>
-
                     <button class="secondary-button" id="watchTogetherHome" type="button">
-                        👥 Watch Together
+                        👥 <span data-i18n="watchTogether">Watch Together</span>
                     </button>
-
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- =========================
-             SEARCH
-        ========================== -->
-
+        <!-- SEARCH -->
         <section class="movies search-section">
-
             <div class="section-header">
-
                 <div>
-                    <span class="section-label">DISCOVER</span>
-                    <h2>Find Something to Watch</h2>
+                    <span class="section-label" data-i18n="discover">DISCOVER</span>
+                    <h2 data-i18n="findSomething">Find Something to Watch</h2>
                 </div>
-
             </div>
-
             <div class="search-wrapper">
-
                 <span class="search-icon">⌕</span>
-
                 <input
                     class="search-input"
                     id="searchInput"
                     type="text"
                     placeholder="Search movies and series..."
+                    data-i18n-placeholder="searchMovies"
                     autocomplete="off"
                 >
-
             </div>
-
         </section>
-
-
-        <!-- =========================
-             TRENDING
-        ========================== -->
-
+        <!-- TRENDING -->
         <section class="movies">
-
             <div class="section-header">
-
                 <div>
-                    <span class="section-label">POPULAR</span>
-                    <h2>Trending Now</h2>
+                    <span class="section-label" data-i18n="popular">POPULAR</span>
+                    <h2 data-i18n="trendingNow">Trending Now</h2>
                 </div>
-
-                <button class="view-all-button" type="button">
+                <button class="view-all-button" type="button" data-i18n="viewAll">
                     View All →
                 </button>
-
             </div>
-
-
             <div class="movie-list">
-
-                <!-- BIG BUCK BUNNY -->
-
                 <article class="movie-card">
-
                     <div
                         class="movie-image movie-bg-one"
                         data-title="Big Buck Bunny"
                         data-video="https://download.blender.org/demo/movies/BBB/BBB-60fps-1080p.mp4"
                     >
-
                         <span class="movie-icon">🐰</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
                             <button
                                 type="button"
                                 class="play-movie"
@@ -164,41 +96,22 @@
                             >
                                 ▶
                             </button>
-
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Big Buck Bunny</h3>
-
-                        <p>
-                            ⭐ 8.5
-                            <span>•</span>
-                            2008
-                        </p>
-
+                        <p>⭐ 8.5 <span>•</span> 2008</p>
                     </div>
-
                 </article>
-
-
-                <!-- SINTEL -->
-
                 <article class="movie-card">
-
                     <div
                         class="movie-image movie-bg-two"
                         data-title="Sintel"
                         data-video="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
                     >
-
                         <span class="movie-icon">🎬</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
                             <button
                                 type="button"
                                 class="play-movie"
@@ -207,41 +120,22 @@
                             >
                                 ▶
                             </button>
-
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Sintel</h3>
-
-                        <p>
-                            ⭐ 8.2
-                            <span>•</span>
-                            2010
-                        </p>
-
+                        <p>⭐ 8.2 <span>•</span> 2010</p>
                     </div>
-
                 </article>
-
-
-                <!-- TEARS OF STEEL -->
-
                 <article class="movie-card">
-
                     <div
                         class="movie-image movie-bg-three"
                         data-title="Tears of Steel"
                         data-video="https://download.blender.org/demo/movies/ToS/tears_of_steel_1080p.mov"
                     >
-
                         <span class="movie-icon">🤖</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
                             <button
                                 type="button"
                                 class="play-movie"
@@ -250,41 +144,22 @@
                             >
                                 ▶
                             </button>
-
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Tears of Steel</h3>
-
-                        <p>
-                            ⭐ 8.0
-                            <span>•</span>
-                            2012
-                        </p>
-
+                        <p>⭐ 8.0 <span>•</span> 2012</p>
                     </div>
-
                 </article>
-
-
-                <!-- ELEPHANTS DREAM -->
-
                 <article class="movie-card">
-
                     <div
                         class="movie-image movie-bg-four"
                         data-title="Elephants Dream"
                         data-video="https://download.blender.org/ED/ed_1024.avi"
                     >
-
                         <span class="movie-icon">🐘</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
                             <button
                                 type="button"
                                 class="play-movie"
@@ -293,61 +168,33 @@
                             >
                                 ▶
                             </button>
-
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Elephants Dream</h3>
-
-                        <p>
-                            ⭐ 7.9
-                            <span>•</span>
-                            2006
-                        </p>
-
+                        <p>⭐ 7.9 <span>•</span> 2006</p>
                     </div>
-
                 </article>
-
             </div>
-
         </section>
-
-
-        <!-- =========================
-             POPULAR TONIGHT
-        ========================== -->
-
+        <!-- POPULAR TONIGHT -->
         <section class="movies">
-
             <div class="section-header">
-
                 <div>
-                    <span class="section-label">TONIGHT</span>
-                    <h2>Popular Tonight</h2>
+                    <span class="section-label" data-i18n="tonight">TONIGHT</span>
+                    <h2 data-i18n="popularTonight">Popular Tonight</h2>
                 </div>
-
             </div>
-
-
             <div class="movie-list">
-
                 <article class="movie-card">
-
                     <div
                         class="movie-image movie-bg-five"
                         data-title="Big Buck Bunny"
                         data-video="https://download.blender.org/demo/movies/BBB/BBB-60fps-1080p.mp4"
                     >
-
                         <span class="movie-icon">🍿</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
                             <button
                                 type="button"
                                 class="play-movie"
@@ -356,39 +203,22 @@
                             >
                                 ▶
                             </button>
-
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Big Buck Bunny</h3>
-
-                        <p>
-                            ⭐ 8.7
-                            <span>•</span>
-                            2008
-                        </p>
-
+                        <p>⭐ 8.7 <span>•</span> 2008</p>
                     </div>
-
                 </article>
-
-
                 <article class="movie-card">
-
                     <div
                         class="movie-image movie-bg-six"
                         data-title="Sintel"
                         data-video="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
                     >
-
                         <span class="movie-icon">🍿</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
                             <button
                                 type="button"
                                 class="play-movie"
@@ -397,2043 +227,532 @@
                             >
                                 ▶
                             </button>
-
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Sintel</h3>
-
-                        <p>
-                            ⭐ 8.4
-                            <span>•</span>
-                            2010
-                        </p>
-
+                        <p>⭐ 8.4 <span>•</span> 2010</p>
                     </div>
-
                 </article>
-
             </div>
-
         </section>
-
-
-        <!-- =========================
-             NEW GENRE SECTIONS
-        ========================== -->
-
-        <!-- ACTION -->
-
-        <section class="movies genre-section" data-genre="Action">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Action</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-one">
-
-                        <span class="movie-icon">💥</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Action Movie One</h3>
-                        <p>⭐ 8.6 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-two">
-
-                        <span class="movie-icon">🚗</span>
-                        <span class="movie-quality">4K</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Fast Chase</h3>
-                        <p>⭐ 8.3 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-three">
-
-                        <span class="movie-icon">⚔️</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Final Battle</h3>
-                        <p>⭐ 8.1 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ROMANCE -->
-
-        <section class="movies genre-section" data-genre="Romance">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Romance</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-four">
-
-                        <span class="movie-icon">❤️</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Love Tonight</h3>
-                        <p>⭐ 8.8 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-five">
-
-                        <span class="movie-icon">🌹</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Forever Us</h3>
-                        <p>⭐ 8.5 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-six">
-
-                        <span class="movie-icon">💌</span>
-                        <span class="movie-quality">4K</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Letters of Love</h3>
-                        <p>⭐ 8.2 <span>•</span> 2024</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- HORROR -->
-
-        <section class="movies genre-section" data-genre="Horror">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Horror</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-seven">
-
-                        <span class="movie-icon">👻</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>The Shadow</h3>
-                        <p>⭐ 8.0 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-eight">
-
-                        <span class="movie-icon">🩸</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Dark Night</h3>
-                        <p>⭐ 7.9 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-nine">
-
-                        <span class="movie-icon">🏚️</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Forgotten House</h3>
-                        <p>⭐ 8.1 <span>•</span> 2024</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- COMEDY -->
-
-        <section class="movies genre-section" data-genre="Comedy">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Comedy</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-ten">
-
-                        <span class="movie-icon">😂</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Funny Night</h3>
-                        <p>⭐ 8.4 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-eleven">
-
-                        <span class="movie-icon">🤣</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Crazy Friends</h3>
-                        <p>⭐ 8.0 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- DRAMA -->
-
-        <section class="movies genre-section" data-genre="Drama">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Drama</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-twelve">
-
-                        <span class="movie-icon">🎭</span>
-                        <span class="movie-quality">4K</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Broken Roads</h3>
-                        <p>⭐ 8.7 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-thirteen">
-
-                        <span class="movie-icon">🎬</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>One Last Day</h3>
-                        <p>⭐ 8.5 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- SCI-FI -->
-
-        <section class="movies genre-section" data-genre="Sci-Fi">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Sci-Fi</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-fourteen">
-
-                        <span class="movie-icon">🚀</span>
-                        <span class="movie-quality">4K</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Beyond Space</h3>
-                        <p>⭐ 8.9 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-fifteen">
-
-                        <span class="movie-icon">🛸</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Unknown Planet</h3>
-                        <p>⭐ 8.3 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- THRILLER -->
-
-        <section class="movies genre-section" data-genre="Thriller">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Thriller</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-sixteen">
-
-                        <span class="movie-icon">🔍</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>The Mystery</h3>
-                        <p>⭐ 8.6 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-seventeen">
-
-                        <span class="movie-icon">🕵️</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Hidden Truth</h3>
-                        <p>⭐ 8.2 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ADVENTURE -->
-
-        <section class="movies genre-section" data-genre="Adventure">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Adventure</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-eighteen">
-
-                        <span class="movie-icon">🏔️</span>
-                        <span class="movie-quality">4K</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Lost World</h3>
-                        <p>⭐ 8.7 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-nineteen">
-
-                        <span class="movie-icon">🗺️</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Hidden Treasure</h3>
-                        <p>⭐ 8.4 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ANIMATION -->
-
-        <section class="movies genre-section" data-genre="Animation">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Animation</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-twenty">
-
-                        <span class="movie-icon">🐻</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Forest Friends</h3>
-                        <p>⭐ 8.8 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-twenty-one">
-
-                        <span class="movie-icon">🐉</span>
-                        <span class="movie-quality">4K</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Dragon Dreams</h3>
-                        <p>⭐ 9.0 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- FAMILY -->
-
-        <section class="movies genre-section" data-genre="Family">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-label">GENRE</span>
-                    <h2>Family</h2>
-                </div>
-
-                <button class="view-all-button" type="button">
-                    View All →
-                </button>
-
-            </div>
-
-            <div class="movie-list">
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-twenty-two">
-
-                        <span class="movie-icon">👨‍👩‍👧‍👦</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Family Time</h3>
-                        <p>⭐ 8.5 <span>•</span> 2026</p>
-                    </div>
-
-                </article>
-
-
-                <article class="movie-card">
-
-                    <div class="movie-image genre-bg-twenty-three">
-
-                        <span class="movie-icon">🌈</span>
-                        <span class="movie-quality">HD</span>
-
-                        <div class="movie-hover">
-                            <button type="button" class="play-movie">▶</button>
-                        </div>
-
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>A New Adventure</h3>
-                        <p>⭐ 8.3 <span>•</span> 2025</p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
     </section>
-
-
-    <!-- =========================
-         SERIES PAGE
-    ========================== -->
-
+    <!-- SERIES -->
     <section class="page" id="seriesPage">
-
         <div class="simple-page">
-
-            <span class="section-label">EXPLORE</span>
-
-            <h1>Series</h1>
-
-            <p>
+            <span class="section-label" data-i18n="explore">EXPLORE</span>
+            <h1 data-i18n="series">Series</h1>
+            <p data-i18n="seriesDescription">
                 Discover your favorite series and find your next obsession.
             </p>
-
         </div>
-
-
         <section class="movies">
-
             <div class="section-header">
-
                 <div>
-                    <span class="section-label">TOP PICKS</span>
-                    <h2>Popular Series</h2>
+                    <span class="section-label" data-i18n="topPicks">TOP PICKS</span>
+                    <h2 data-i18n="popularSeries">Popular Series</h2>
                 </div>
-
             </div>
-
-
             <div class="movie-list">
-
                 <article class="movie-card">
-
                     <div class="movie-image series-bg-one">
-
                         <span class="movie-icon">📺</span>
                         <span class="movie-quality">4K</span>
-
                         <div class="movie-hover">
-
-                            <button type="button">
-                                ▶
-                            </button>
-
+                            <button type="button">▶</button>
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Series One</h3>
-
-                        <p>
-                            ⭐ 9.0
-                            <span>•</span>
-                            2026
-                        </p>
-
+                        <p>⭐ 9.0 <span>•</span> 2026</p>
                     </div>
-
                 </article>
-
-
                 <article class="movie-card">
-
                     <div class="movie-image series-bg-two">
-
                         <span class="movie-icon">📺</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
-                            <button type="button">
-                                ▶
-                            </button>
-
+                            <button type="button">▶</button>
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Series Two</h3>
-
-                        <p>
-                            ⭐ 8.8
-                            <span>•</span>
-                            2026
-                        </p>
-
+                        <p>⭐ 8.8 <span>•</span> 2026</p>
                     </div>
-
                 </article>
-
-
                 <article class="movie-card">
-
                     <div class="movie-image series-bg-three">
-
                         <span class="movie-icon">📺</span>
                         <span class="movie-quality">HD</span>
-
                         <div class="movie-hover">
-
-                            <button type="button">
-                                ▶
-                            </button>
-
+                            <button type="button">▶</button>
                         </div>
-
                     </div>
-
                     <div class="movie-info">
-
                         <h3>Series Three</h3>
-
-                        <p>
-                            ⭐ 8.6
-                            <span>•</span>
-                            2026
-                        </p>
-
+                        <p>⭐ 8.6 <span>•</span> 2026</p>
                     </div>
-
                 </article>
-
             </div>
-
         </section>
-
     </section>
-
-
-    <!-- =========================
-         WATCH TOGETHER
-    ========================== -->
-
+    <!-- WATCH TOGETHER -->
     <section class="page" id="togetherPage">
-
         <div class="center-page">
-
             <div class="feature-icon">👥</div>
-
-            <span class="section-label">WATCH TOGETHER</span>
-
-            <h1>Never Watch Alone</h1>
-
-            <p>
+            <span class="section-label" data-i18n="watchTogether">WATCH TOGETHER</span>
+            <h1 data-i18n="neverWatchAlone">Never Watch Alone</h1>
+            <p data-i18n="togetherDescription">
                 Create a private room and watch movies together
                 with someone, even when you're far apart.
             </p>
-
-
             <div class="together-card">
-
-                <button
-                    class="main-button full-button"
-                    id="createRoom"
-                    type="button"
-                >
-                    ✨ Create a Room
+                <button class="main-button full-button" id="createRoom" type="button">
+                    ✨ <span data-i18n="createRoom">Create a Room</span>
                 </button>
-
                 <div class="divider">
-                    <span>OR</span>
+                    <span data-i18n="or">OR</span>
                 </div>
-
                 <div class="room-area">
-
                     <input
                         id="roomCode"
                         type="text"
                         placeholder="Enter room code"
+                        data-i18n-placeholder="enterRoomCode"
                         maxlength="8"
                         autocomplete="off"
                     >
-
-                    <button
-                        class="secondary-button"
-                        id="joinRoom"
-                        type="button"
-                    >
-                        Join Room
+                    <button class="secondary-button" id="joinRoom" type="button">
+                        <span data-i18n="joinRoom">Join Room</span>
                     </button>
-
                 </div>
-
                 <p id="roomMessage" class="message"></p>
-
-
-                <!-- =========================
-                     WATCH TOGETHER ROOM
-                ========================== -->
-
-                <div
-                    class="watch-together-room"
-                    id="watchTogetherRoom"
-                >
-
-                    <div class="room-header">
-
-                        <div>
-
-                            <span class="section-label">
-                                PRIVATE ROOM
-                            </span>
-
-                            <h2>Watching Together</h2>
-
-                        </div>
-
-                        <div class="room-status">
-                            ● Connected
-                        </div>
-
-                    </div>
-
-
-                    <!-- VIDEO AREA -->
-
-                    <div class="together-video-area">
-
-                        <video
-                            id="togetherVideo"
-                            controls
-                            playsinline
-                            preload="metadata"
-                        ></video>
-
-                    </div>
-
-
-                    <!-- ROOM MOVIE -->
-
-                    <div class="together-movie-info">
-
-                        <div>
-
-                            <span class="section-label">
-                                NOW WATCHING
-                            </span>
-
-                            <h3 id="togetherMovieTitle">
-                                Choose a movie
-                            </h3>
-
-                        </div>
-
-                        <button
-                            class="secondary-button"
-                            id="leaveRoom"
-                            type="button"
-                        >
-                            Leave Room
-                        </button>
-
-                    </div>
-
-
-                    <!-- LANGUAGE CONTROLS -->
-
-                    <div class="together-language-card">
-
-                        <div class="setting-row">
-
-                            <div>
-
-                                <h3>💬 My Subtitles</h3>
-
-                                <p>
-                                    Choose your subtitle language.
-                                    Your choice is private to you.
-                                </p>
-
-                            </div>
-
-                            <select
-                                id="mySubtitleLanguage"
-                            >
-
-                                <option value="Arabic">
-                                    العربية
-                                </option>
-
-                                <option value="English">
-                                    English
-                                </option>
-
-                                <option value="Lithuanian">
-                                    Lietuvių
-                                </option>
-
-                                <option value="Russian">
-                                    Русский
-                                </option>
-
-                                <option value="Ukrainian">
-                                    Українська
-                                </option>
-
-                                <option value="Chinese">
-                                    中文
-                                </option>
-
-                                <option value="Portuguese">
-                                    Português
-                                </option>
-
-                                <option value="French">
-                                    Français
-                                </option>
-
-                                <option value="Spanish">
-                                    Español
-                                </option>
-
-                                <option value="German">
-                                    Deutsch
-                                </option>
-
-                                <option value="Italian">
-                                    Italiano
-                                </option>
-
-                                <option value="Turkish">
-                                    Türkçe
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="setting-row">
-
-                            <div>
-
-                                <h3>🔊 My Audio</h3>
-
-                                <p>
-                                    Choose your preferred audio language.
-                                </p>
-
-                            </div>
-
-                            <select
-                                id="myAudioLanguage"
-                            >
-
-                                <option value="Original Language">
-                                    Original Language
-                                </option>
-
-                                <option value="Arabic">
-                                    العربية
-                                </option>
-
-                                <option value="English">
-                                    English
-                                </option>
-
-                                <option value="Lithuanian">
-                                    Lietuvių
-                                </option>
-
-                                <option value="Russian">
-                                    Русский
-                                </option>
-
-                                <option value="Ukrainian">
-                                    Українська
-                                </option>
-
-                                <option value="Chinese">
-                                    中文
-                                </option>
-
-                                <option value="Portuguese">
-                                    Português
-                                </option>
-
-                                <option value="French">
-                                    Français
-                                </option>
-
-                                <option value="Spanish">
-                                    Español
-                                </option>
-
-                                <option value="German">
-                                    Deutsch
-                                </option>
-
-                                <option value="Italian">
-                                    Italiano
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CHAT -->
-
-                    <div class="watch-chat">
-
-                        <div class="chat-header">
-
-                            <div>
-
-                                <span class="section-label">
-                                    CHAT
-                                </span>
-
-                                <h3>
-                                    💬 Messages
-                                </h3>
-
-                            </div>
-
-                            <span class="chat-online">
-                                ● Online
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="chat-messages"
-                            id="chatMessages"
-                        >
-
-                            <div class="chat-message other-message">
-
-                                <div class="chat-avatar">
-                                    👤
-                                </div>
-
-                                <div class="chat-bubble">
-
-                                    <strong>
-                                        Friend
-                                    </strong>
-
-                                    <p>
-                                        Hey! Ready to watch? 🍿
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="chat-message system-message">
-
-                                <p>
-                                    You joined the room.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="chat-input-area">
-
-                            <input
-                                id="chatInput"
-                                type="text"
-                                placeholder="Write a message..."
-                                autocomplete="off"
-                            >
-
-                            <button
-                                id="sendChat"
-                                class="main-button"
-                                type="button"
-                            >
-                                Send
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SYNC STATUS -->
-
-                    <div class="sync-status">
-
-                        <span>
-                            🔄
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Watch Together Sync
-                            </strong>
-
-                            <p>
-                                Playback, pause and seeking will stay synchronized
-                                between people in the same room.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         ACCOUNT
-    ========================== -->
-
+    <!-- ACCOUNT -->
     <section class="page" id="accountPage">
-
         <div class="center-page">
-
             <div class="feature-icon">👤</div>
-
-            <span class="section-label">YOUR ACCOUNT</span>
-
-            <h1>Welcome Back</h1>
-
-            <p>
+            <span class="section-label" data-i18n="yourAccount">YOUR ACCOUNT</span>
+            <h1 data-i18n="welcomeBack">Welcome Back</h1>
+            <p data-i18n="signInDescription">
                 Sign in to your Movies Tonight account.
             </p>
-
-
             <div class="account-box">
-
-                <label for="email">Email</label>
-
+                <label for="email" data-i18n="email">Email</label>
                 <input
                     id="email"
                     type="email"
                     placeholder="Enter your email"
+                    data-i18n-placeholder="enterEmail"
                     autocomplete="email"
                 >
-
-
-                <label for="password">Password</label>
-
+                <label for="password" data-i18n="password">Password</label>
                 <input
                     id="password"
                     type="password"
                     placeholder="Enter your password"
+                    data-i18n-placeholder="enterPassword"
                     autocomplete="current-password"
                 >
-
-
-                <button
-                    class="main-button full-button"
-                    id="loginButton"
-                    type="button"
-                >
-                    Log In
+                <button class="main-button full-button" id="loginButton" type="button">
+                    <span data-i18n="logIn">Log In</span>
                 </button>
-
-                <button
-                    class="secondary-button full-button"
-                    id="signupButton"
-                    type="button"
-                >
-                    Create Account
+                <button class="secondary-button full-button" id="signupButton" type="button">
+                    <span data-i18n="createAccount">Create Account</span>
                 </button>
-
                 <p id="accountMessage" class="message"></p>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         SETTINGS
-    ========================== -->
-
+    <!-- SETTINGS -->
     <section class="page" id="settingsPage">
-
         <div class="center-page">
-
-            <span class="section-label">PREFERENCES</span>
-
-            <h1>Settings</h1>
-
-            <p>
+            <span class="section-label" data-i18n="preferences">PREFERENCES</span>
+            <h1 data-i18n="settings">Settings</h1>
+            <p data-i18n="settingsDescription">
                 Manage your Movies Tonight experience.
             </p>
-
-
             <div class="settings-card">
-
+                <!-- THEME -->
                 <div class="setting-item">
-
                     <div>
-
-                        <h3>🎬 Autoplay</h3>
-
-                        <p>
+                        <h3>🌙 <span data-i18n="appearance">Appearance</span></h3>
+                        <p data-i18n="appearanceDescription">
+                            Choose between dark and light mode.
+                        </p>
+                    </div>
+                    <label class="toggle">
+                        <input
+                            type="checkbox"
+                            id="themeToggle"
+                            aria-label="Dark mode"
+                        >
+                        <span></span>
+                    </label>
+                </div>
+                <!-- AUTOPLAY -->
+                <div class="setting-item">
+                    <div>
+                        <h3>🎬 <span data-i18n="autoplay">Autoplay</span></h3>
+                        <p data-i18n="autoplayDescription">
                             Automatically play the next episode.
                         </p>
-
                     </div>
-
                     <label class="toggle">
-
-                        <input type="checkbox" checked>
-
+                        <input
+                            type="checkbox"
+                            id="autoplayToggle"
+                            checked
+                        >
                         <span></span>
-
                     </label>
-
                 </div>
-
-
+                <!-- NOTIFICATIONS -->
                 <div class="setting-item">
-
                     <div>
-
-                        <h3>🔔 Notifications</h3>
-
-                        <p>
+                        <h3>🔔 <span data-i18n="notifications">Notifications</span></h3>
+                        <p data-i18n="notificationsDescription">
                             Receive updates about new releases.
                         </p>
-
                     </div>
-
                     <label class="toggle">
-
-                        <input type="checkbox" checked>
-
+                        <input
+                            type="checkbox"
+                            id="notificationsToggle"
+                            checked
+                        >
                         <span></span>
-
                     </label>
-
                 </div>
-
-
+                <!-- LANGUAGE SHORTCUT -->
+                <button
+                    class="secondary-button full-button"
+                    id="openLanguageSettings"
+                    type="button"
+                >
+                    🌐 <span data-i18n="languageSubtitles">Language & Subtitles</span>
+                </button>
                 <button
                     class="main-button full-button"
                     id="saveSettings"
                     type="button"
                 >
-                    Save Settings
+                    <span data-i18n="saveSettings">Save Settings</span>
                 </button>
-
                 <p id="settingsMessage" class="message"></p>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         NOTIFICATIONS
-    ========================== -->
-
+    <!-- NOTIFICATIONS -->
     <section class="page" id="notificationsPage">
-
         <div class="center-page">
-
-            <span class="section-label">UPDATES</span>
-
-            <h1>Notifications</h1>
-
-            <p>
+            <span class="section-label" data-i18n="updates">UPDATES</span>
+            <h1 data-i18n="notifications">Notifications</h1>
+            <p data-i18n="notificationsPageDescription">
                 Your latest notifications will appear here.
             </p>
-
-
             <div class="empty-state">
-
                 <div>🔔</div>
-
-                <h3>No notifications yet</h3>
-
-                <p>
+                <h3 data-i18n="noNotifications">No notifications yet</h3>
+                <p data-i18n="noNotificationsDescription">
                     We'll let you know when something important happens.
                 </p>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         LANGUAGE
-    ========================== -->
-
+    <!-- LANGUAGE & SUBTITLES -->
     <section class="page" id="languagePage">
-
         <div class="settings-page">
-
             <div class="settings-header">
-
                 <button
                     class="back-button"
-                    data-back="moviesPage"
+                    data-back="settingsPage"
                     type="button"
+                    aria-label="Back"
                 >
                     ←
                 </button>
-
                 <div>
-
-                    <span class="section-label">
+                    <span class="section-label" data-i18n="preferences">
                         PREFERENCES
                     </span>
-
-                    <h1>
+                    <h1 data-i18n="languageSubtitles">
                         Language & Subtitles
                     </h1>
-
-                    <p>
+                    <p data-i18n="languageDescription">
                         Customize your viewing experience.
                     </p>
-
                 </div>
-
             </div>
-
-
             <div class="language-card">
-
-
-                <!-- LANGUAGE SEARCH -->
-
-                <div class="language-search-box">
-
-                    <span class="search-icon">
-                        ⌕
-                    </span>
-
-                    <input
-                        id="languageSearch"
-                        class="search-input"
-                        type="text"
-                        placeholder="Search any language..."
-                        autocomplete="off"
-                    >
-
-                </div>
-
-
                 <!-- APP LANGUAGE -->
-
                 <div class="setting-row">
-
                     <div>
-
-                        <h3>🌐 App Language</h3>
-
-                        <p>
+                        <h3>🌐 <span data-i18n="appLanguage">App Language</span></h3>
+                        <p data-i18n="appLanguageDescription">
                             Choose the language of Movies Tonight.
                         </p>
-
                     </div>
-
                     <select id="languageSelect">
-
-                        <option value="English">
-                            English
-                        </option>
-
-                        <option value="Arabic">
-                            العربية
-                        </option>
-
-                        <option value="Lithuanian">
-                            Lietuvių
-                        </option>
-
-                        <option value="Russian">
-                            Русский
-                        </option>
-
-                        <option value="Ukrainian">
-                            Українська
-                        </option>
-
-                        <option value="Chinese">
-                            中文
-                        </option>
-
-                        <option value="Portuguese">
-                            Português
-                        </option>
-
-                        <option value="French">
-                            Français
-                        </option>
-
-                        <option value="Spanish">
-                            Español
-                        </option>
-
-                        <option value="German">
-                            Deutsch
-                        </option>
-
-                        <option value="Italian">
-                            Italiano
-                        </option>
-
-                        <option value="Turkish">
-                            Türkçe
-                        </option>
-
-                        <option value="Polish">
-                            Polski
-                        </option>
-
-                        <option value="Dutch">
-                            Nederlands
-                        </option>
-
-                        <option value="Swedish">
-                            Svenska
-                        </option>
-
-                        <option value="Norwegian">
-                            Norsk
-                        </option>
-
-                        <option value="Danish">
-                            Dansk
-                        </option>
-
-                        <option value="Finnish">
-                            Suomi
-                        </option>
-
-                        <option value="Greek">
-                            Ελληνικά
-                        </option>
-
-                        <option value="Czech">
-                            Čeština
-                        </option>
-
-                        <option value="Slovak">
-                            Slovenčina
-                        </option>
-
-                        <option value="Hungarian">
-                            Magyar
-                        </option>
-
-                        <option value="Romanian">
-                            Română
-                        </option>
-
-                        <option value="Bulgarian">
-                            Български
-                        </option>
-
-                        <option value="Serbian">
-                            Српски
-                        </option>
-
-                        <option value="Croatian">
-                            Hrvatski
-                        </option>
-
-                        <option value="Slovenian">
-                            Slovenščina
-                        </option>
-
-                        <option value="Estonian">
-                            Eesti
-                        </option>
-
-                        <option value="Latvian">
-                            Latviešu
-                        </option>
-
-                        <option value="Hebrew">
-                            עברית
-                        </option>
-
-                        <option value="Persian">
-                            فارسی
-                        </option>
-
-                        <option value="Urdu">
-                            اردو
-                        </option>
-
-                        <option value="Hindi">
-                            हिन्दी
-                        </option>
-
-                        <option value="Bengali">
-                            বাংলা
-                        </option>
-
-                        <option value="Indonesian">
-                            Bahasa Indonesia
-                        </option>
-
-                        <option value="Malay">
-                            Bahasa Melayu
-                        </option>
-
-                        <option value="Thai">
-                            ไทย
-                        </option>
-
-                        <option value="Vietnamese">
-                            Tiếng Việt
-                        </option>
-
-                        <option value="Korean">
-                            한국어
-                        </option>
-
-                        <option value="Japanese">
-                            日本語
-                        </option>
-
-                        <option value="Swahili">
-                            Kiswahili
-                        </option>
-
-                        <option value="Amharic">
-                            አማርኛ
-                        </option>
-
-                        <option value="Somali">
-                            Soomaali
-                        </option>
-
-                        <option value="Afrikaans">
-                            Afrikaans
-                        </option>
-
+                        <option value="English">English</option>
+                        <option value="Arabic">العربية</option>
+                        <option value="Portuguese">Português</option>
+                        <option value="French">Français</option>
+                        <option value="Spanish">Español</option>
+                        <option value="German">Deutsch</option>
+                        <option value="Italian">Italiano</option>
+                        <option value="Turkish">Türkçe</option>
+                        <option value="Russian">Русский</option>
+                        <option value="Ukrainian">Українська</option>
+                        <option value="Lithuanian">Lietuvių</option>
+                        <option value="Polish">Polski</option>
+                        <option value="Czech">Čeština</option>
+                        <option value="Slovak">Slovenčina</option>
+                        <option value="Dutch">Nederlands</option>
+                        <option value="Greek">Ελληνικά</option>
+                        <option value="Romanian">Română</option>
+                        <option value="Bulgarian">Български</option>
+                        <option value="Serbian">Српски</option>
+                        <option value="Croatian">Hrvatski</option>
+                        <option value="Hungarian">Magyar</option>
+                        <option value="Swedish">Svenska</option>
+                        <option value="Norwegian">Norsk</option>
+                        <option value="Danish">Dansk</option>
+                        <option value="Finnish">Suomi</option>
+                        <option value="Estonian">Eesti</option>
+                        <option value="Latvian">Latviešu</option>
+                        <option value="Icelandic">Íslenska</option>
+                        <option value="Irish">Gaeilge</option>
+                        <option value="Hebrew">עברית</option>
+                        <option value="Persian">فارسی</option>
+                        <option value="Urdu">اردو</option>
+                        <option value="Hindi">हिन्दी</option>
+                        <option value="Bengali">বাংলা</option>
+                        <option value="Punjabi">ਪੰਜਾਬੀ</option>
+                        <option value="Tamil">தமிழ்</option>
+                        <option value="Telugu">తెలుగు</option>
+                        <option value="Marathi">मराठी</option>
+                        <option value="Gujarati">ગુજરાતી</option>
+                        <option value="Malayalam">മലയാളം</option>
+                        <option value="Kannada">ಕನ್ನಡ</option>
+                        <option value="Thai">ไทย</option>
+                        <option value="Vietnamese">Tiếng Việt</option>
+                        <option value="Indonesian">Bahasa Indonesia</option>
+                        <option value="Malay">Bahasa Melayu</option>
+                        <option value="Filipino">Filipino</option>
+                        <option value="Chinese">中文</option>
+                        <option value="Japanese">日本語</option>
+                        <option value="Korean">한국어</option>
+                        <option value="Mongolian">Монгол</option>
+                        <option value="Georgian">ქართული</option>
+                        <option value="Armenian">Հայերեն</option>
+                        <option value="Azerbaijani">Azərbaycan</option>
+                        <option value="Kazakh">Қазақша</option>
+                        <option value="Uzbek">O‘zbek</option>
+                        <option value="Kyrgyz">Кыргызча</option>
+                        <option value="Swahili">Kiswahili</option>
+                        <option value="Amharic">አማርኛ</option>
+                        <option value="Somali">Soomaali</option>
+                        <option value="Zulu">isiZulu</option>
+                        <option value="Afrikaans">Afrikaans</option>
+                        <option value="Xhosa">isiXhosa</option>
+                        <option value="Yoruba">Yorùbá</option>
+                        <option value="Hausa">Hausa</option>
+                        <option value="Nepali">नेपाली</option>
+                        <option value="Sinhala">සිංහල</option>
+                        <option value="Khmer">ខ្មែរ</option>
+                        <option value="Lao">ລາວ</option>
+                        <option value="Burmese">မြန်မာ</option>
                     </select>
-
                 </div>
-
-
+                <!-- LANGUAGE SEARCH -->
+                <div class="language-search">
+                    <label for="languageSearch" data-i18n="searchLanguage">
+                        🔎 Search Language
+                    </label>
+                    <input
+                        type="text"
+                        id="languageSearch"
+                        placeholder="Type a language name..."
+                        data-i18n-placeholder="typeLanguage"
+                        autocomplete="off"
+                    >
+                    <div
+                        id="languageSearchResults"
+                        class="language-search-results"
+                    ></div>
+                </div>
                 <!-- SUBTITLE -->
-
                 <div class="setting-row">
-
                     <div>
-
-                        <h3>💬 Subtitle Language</h3>
-
-                        <p>
+                        <h3>💬 <span data-i18n="subtitleLanguage">Subtitle Language</span></h3>
+                        <p data-i18n="subtitleDescription">
                             Your preferred subtitle language.
                         </p>
-
                     </div>
-
                     <select id="subtitleSelect">
-
-                        <option value="Arabic">
-                            Arabic
-                        </option>
-
-                        <option value="English">
-                            English
-                        </option>
-
-                        <option value="Lithuanian">
-                            Lithuanian
-                        </option>
-
-                        <option value="Russian">
-                            Russian
-                        </option>
-
-                        <option value="Ukrainian">
-                            Ukrainian
-                        </option>
-
-                        <option value="Chinese">
-                            Chinese
-                        </option>
-
-                        <option value="Portuguese">
-                            Portuguese
-                        </option>
-
-                        <option value="French">
-                            French
-                        </option>
-
-                        <option value="Spanish">
-                            Spanish
-                        </option>
-
-                        <option value="German">
-                            German
-                        </option>
-
-                        <option value="Italian">
-                            Italian
-                        </option>
-
-                        <option value="Turkish">
-                            Turkish
-                        </option>
-
-                        <option value="Japanese">
-                            Japanese
-                        </option>
-
-                        <option value="Korean">
-                            Korean
-                        </option>
-
-                        <option value="Hindi">
-                            Hindi
-                        </option>
-
-                        <option value="Urdu">
-                            Urdu
-                        </option>
-
-                        <option value="Persian">
-                            Persian
-                        </option>
-
+                        <option value="Arabic">Arabic</option>
+                        <option value="English">English</option>
+                        <option value="Lithuanian">Lithuanian</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Ukrainian">Ukrainian</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="German">German</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Urdu">Urdu</option>
+                        <option value="Persian">Persian</option>
+                        <option value="Hebrew">Hebrew</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Romanian">Romanian</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Norwegian">Norwegian</option>
+                        <option value="Danish">Danish</option>
+                        <option value="Finnish">Finnish</option>
+                        <option value="Swahili">Swahili</option>
+                        <option value="Amharic">Amharic</option>
+                        <option value="Somali">Somali</option>
                     </select>
-
                 </div>
-
-
                 <!-- AUDIO -->
-
                 <div class="setting-row">
-
                     <div>
-
-                        <h3>🔊 Audio Language</h3>
-
-                        <p>
+                        <h3>🔊 <span data-i18n="audioLanguage">Audio Language</span></h3>
+                        <p data-i18n="audioDescription">
                             Your preferred audio language.
                         </p>
-
                     </div>
-
                     <select id="audioSelect">
-
-                        <option value="Original Language">
-                            Original Language
-                        </option>
-
-                        <option value="Arabic">
-                            Arabic
-                        </option>
-
-                        <option value="English">
-                            English
-                        </option>
-
-                        <option value="Lithuanian">
-                            Lithuanian
-                        </option>
-
-                        <option value="Russian">
-                            Russian
-                        </option>
-
-                        <option value="Ukrainian">
-                            Ukrainian
-                        </option>
-
-                        <option value="Chinese">
-                            Chinese
-                        </option>
-
-                        <option value="Portuguese">
-                            Portuguese
-                        </option>
-
-                        <option value="French">
-                            French
-                        </option>
-
-                        <option value="Spanish">
-                            Spanish
-                        </option>
-
-                        <option value="German">
-                            German
-                        </option>
-
-                        <option value="Italian">
-                            Italian
-                        </option>
-
-                        <option value="Turkish">
-                            Turkish
-                        </option>
-
-                        <option value="Japanese">
-                            Japanese
-                        </option>
-
-                        <option value="Korean">
-                            Korean
-                        </option>
-
+                        <option value="Original Language">Original Language</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="English">English</option>
+                        <option value="Lithuanian">Lithuanian</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Ukrainian">Ukrainian</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="German">German</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Urdu">Urdu</option>
+                        <option value="Persian">Persian</option>
+                        <option value="Hebrew">Hebrew</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Romanian">Romanian</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Norwegian">Norwegian</option>
+                        <option value="Danish">Danish</option>
+                        <option value="Finnish">Finnish</option>
+                        <option value="Swahili">Swahili</option>
+                        <option value="Amharic">Amharic</option>
+                        <option value="Somali">Somali</option>
                     </select>
-
                 </div>
-
-
                 <button
                     class="main-button save-button"
                     id="saveLanguage"
                     type="button"
                 >
-                    Save Preferences
+                    <span data-i18n="savePreferences">Save Preferences</span>
                 </button>
-
                 <p id="languageMessage" class="message"></p>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         PRIVACY
-    ========================== -->
-
+    <!-- PRIVACY -->
     <section class="page" id="privacyPage">
-
         <div class="center-page">
-
-            <span class="section-label">SECURITY</span>
-
-            <h1>Privacy</h1>
-
-            <p>
+            <span class="section-label" data-i18n="security">SECURITY</span>
+            <h1 data-i18n="privacy">Privacy</h1>
+            <p data-i18n="privacyDescription">
                 Manage your privacy and security settings.
             </p>
-
-
             <div class="privacy-card">
-
                 <div class="privacy-item">
-
                     <span>🔒</span>
-
                     <div>
-
-                        <h3>Account Privacy</h3>
-
-                        <p>
+                        <h3 data-i18n="accountPrivacy">Account Privacy</h3>
+                        <p data-i18n="accountPrivacyDescription">
                             Your account information is private.
                         </p>
-
                     </div>
-
                 </div>
-
-
                 <div class="privacy-item">
-
                     <span>🛡️</span>
-
                     <div>
-
-                        <h3>Secure Experience</h3>
-
-                        <p>
+                        <h3 data-i18n="secureExperience">Secure Experience</h3>
+                        <p data-i18n="secureExperienceDescription">
                             We're building a safe and secure viewing experience.
                         </p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         HELP
-    ========================== -->
-
+    <!-- HELP -->
     <section class="page" id="helpPage">
-
         <div class="center-page">
-
             <div class="feature-icon">❓</div>
-
-            <span class="section-label">SUPPORT</span>
-
-            <h1>Help & Support</h1>
-
-            <p>
+            <span class="section-label" data-i18n="support">SUPPORT</span>
+            <h1 data-i18n="helpSupport">Help & Support</h1>
+            <p data-i18n="helpDescription">
                 Need help? Our support center will be available soon.
             </p>
-
-
-            <button
-                class="main-button"
-                id="contactSupport"
-                type="button"
-            >
-                Contact Support
+            <button class="main-button" id="contactSupport" type="button">
+                <span data-i18n="contactSupport">Contact Support</span>
             </button>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         DELETE ACCOUNT
-    ========================== -->
-
+    <!-- DELETE -->
     <section class="page" id="deletePage">
-
         <div class="center-page">
-
             <div class="danger-icon">⚠</div>
-
-            <span class="section-label danger-label">
+            <span class="section-label danger-label" data-i18n="dangerZone">
                 DANGER ZONE
             </span>
-
-            <h1>Delete Account</h1>
-
-            <p>
+            <h1 data-i18n="deleteAccount">Delete Account</h1>
+            <p data-i18n="deleteDescription">
                 Deleting your account is a serious action and
                 may not be reversible.
             </p>
-
-
             <div class="danger-card">
-
-                <p>
+                <p data-i18n="deleteWarning">
                     Please make sure you really want to continue.
                 </p>
-
                 <button
                     class="delete-button"
                     id="confirmDelete"
                     type="button"
                 >
-                    🗑️ Delete My Account
+                    🗑️ <span data-i18n="deleteMyAccount">Delete My Account</span>
                 </button>
-
                 <p id="deleteMessage" class="message"></p>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- =========================
-         VIDEO PLAYER
-    ========================== -->
-
+    <!-- VIDEO PLAYER -->
     <section
         class="video-player-section"
         id="videoPlayerSection"
     >
-
         <div class="video-player-box">
-
             <button
                 class="close-video"
                 id="closeVideo"
@@ -2442,66 +761,39 @@
             >
                 ×
             </button>
-
-
             <video
                 id="moviePlayer"
                 controls
                 playsinline
                 preload="metadata"
             ></video>
-
-
             <div class="video-info">
-
-                <span class="section-label">
+                <span class="section-label" data-i18n="nowPlaying">
                     NOW PLAYING
                 </span>
-
                 <h2 id="videoTitle">
                     Movie
                 </h2>
-
-                <p id="videoDescription">
+                <p id="videoDescription" data-i18n="videoDescription">
                     Enjoy your movie on Movies Tonight.
                 </p>
-
             </div>
-
         </div>
-
     </section>
-
 </main>
-
-
-<!-- =========================
-     PROFILE DROPDOWN
-========================== -->
-
-<section
-    class="profile-section"
-    id="profileSection"
->
-
+<!-- PROFILE -->
+<section class="profile-section" id="profileSection">
     <div class="profile-box">
-
         <div class="profile-header">
-
             <div class="profile-avatar">
                 👤
             </div>
-
             <div>
-
-                <h2>Profile</h2>
-
-                <p>
+                <h2 data-i18n="profile">Profile</h2>
+                <p data-i18n="manageAccount">
                     Manage your account
                 </p>
-
             </div>
-
             <button
                 class="close-profile"
                 id="closeProfile"
@@ -2510,209 +802,110 @@
             >
                 ×
             </button>
-
         </div>
-
-
         <div class="profile-menu">
-
-            <button
-                data-profile-page="accountPage"
-                type="button"
-            >
-
+            <button data-profile-page="accountPage" type="button">
                 <span>👤</span>
-
                 <div>
-
-                    <strong>Account</strong>
-
-                    <small>
+                    <strong data-i18n="account">Account</strong>
+                    <small data-i18n="accountMenuDescription">
                         Sign in and manage account
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
-            <button
-                data-profile-page="settingsPage"
-                type="button"
-            >
-
+            <button data-profile-page="settingsPage" type="button">
                 <span>⚙️</span>
-
                 <div>
-
-                    <strong>Settings</strong>
-
-                    <small>
+                    <strong data-i18n="settings">Settings</strong>
+                    <small data-i18n="settingsMenuDescription">
                         Manage your preferences
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
-            <button
-                data-profile-page="notificationsPage"
-                type="button"
-            >
-
+            <button data-profile-page="notificationsPage" type="button">
                 <span>🔔</span>
-
                 <div>
-
-                    <strong>Notifications</strong>
-
-                    <small>
+                    <strong data-i18n="notifications">Notifications</strong>
+                    <small data-i18n="notificationsMenuDescription">
                         View your notifications
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
-            <button
-                data-profile-page="languagePage"
-                type="button"
-            >
-
+            <button data-profile-page="languagePage" type="button">
                 <span>🌐</span>
-
                 <div>
-
-                    <strong>Language & Subtitles</strong>
-
-                    <small>
+                    <strong data-i18n="languageSubtitles">
+                        Language & Subtitles
+                    </strong>
+                    <small data-i18n="languageMenuDescription">
                         Customize languages
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
-            <button
-                data-profile-page="privacyPage"
-                type="button"
-            >
-
+            <button data-profile-page="privacyPage" type="button">
                 <span>🔒</span>
-
                 <div>
-
-                    <strong>Privacy</strong>
-
-                    <small>
+                    <strong data-i18n="privacy">Privacy</strong>
+                    <small data-i18n="privacyMenuDescription">
                         Security and privacy
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
-            <button
-                data-profile-page="helpPage"
-                type="button"
-            >
-
+            <button data-profile-page="helpPage" type="button">
                 <span>❓</span>
-
                 <div>
-
-                    <strong>Help & Support</strong>
-
-                    <small>
+                    <strong data-i18n="helpSupport">
+                        Help & Support
+                    </strong>
+                    <small data-i18n="helpMenuDescription">
                         Get help
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
-            <button
-                id="profileLogout"
-                type="button"
-            >
-
+            <button id="profileLogout" type="button">
                 <span>🚪</span>
-
                 <div>
-
-                    <strong>Log Out</strong>
-
-                    <small>
+                    <strong data-i18n="logOut">Log Out</strong>
+                    <small data-i18n="logoutDescription">
                         Sign out of your account
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
-
             <button
                 class="delete-account"
                 data-profile-page="deletePage"
                 type="button"
             >
-
                 <span>🗑️</span>
-
                 <div>
-
-                    <strong>Delete Account</strong>
-
-                    <small>
+                    <strong data-i18n="deleteAccount">
+                        Delete Account
+                    </strong>
+                    <small data-i18n="deleteMenuDescription">
                         Permanently delete your account
                     </small>
-
                 </div>
-
                 <b>›</b>
-
             </button>
-
         </div>
-
     </div>
-
 </section>
-
-
+<!-- FOOTER -->
 <footer>
-
     <div class="footer-logo">
         MOVIES TONIGHT
     </div>
-
     <p>
         © 2026 Movies Tonight. All rights reserved.
     </p>
-
 </footer>
-
-
 <script src="script.js"></script>
-
 </body>
 </html>
