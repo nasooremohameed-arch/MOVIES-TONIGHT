@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOVIES TONIGHT - Movies, series and unforgettable nights.">
+    <title>MOVIES TONIGHT</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span class="logo-icon">M</span>
+        <span>MOVIES TONIGHT</span>
+    </div>
+
+    <nav class="nav">
+        <a href="#" class="nav-link active" data-page="moviesPage">Movies</a>
+        <a href="#" class="nav-link" data-page="seriesPage">Series</a>
+        <a href="#" class="nav-link" data-page="togetherPage">Watch Together</a>
+    </nav>
+
+    <div class="right-menu">
+        <button id="profileButton" class="profile-button" type="button">
+            <span class="profile-icon">👤</span>
+            <span>Profile</span>
+        </button>
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- =========================
+         MOVIES PAGE
+    ========================== -->
+
+    <section class="page active-page" id="moviesPage">
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-label">WELCOME TO</span>
+
+                <h1>MOVIES <span>TONIGHT</span></h1>
+
+                <p>
+                    Your place for movies, series and unforgettable nights.
+                    Discover something amazing to watch tonight.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="main-button" id="startWatching" type="button">
+                        ▶ Start Watching
+                    </button>
+
+                    <button class="secondary-button" id="watchTogetherHome" type="button">
+                        👥 Watch Together
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="movies search-section">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">DISCOVER</span>
+                    <h2>Find Something to Watch</h2>
+                </div>
+
+            </div>
+
+            <div class="search-wrapper">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    class="search-input"
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search movies and series..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- TRENDING -->
+
+        <section class="movies">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">POPULAR</span>
+                    <h2>Trending Now</h2>
+                </div>
+
+                <button class="view-all-button" type="button">
+                    View All →
+                </button>
+
+            </div>
+
+
+            <div class="movie-list">
+
+                <!-- BIG BUCK BUNNY -->
+
+                <article class="movie-card">
+
+                    <div
+                        class="movie-image movie-bg-one"
+                        data-title="Big Buck Bunny"
+                        data-video="https://download.blender.org/demo/movies/BBB/BBB-60fps-1080p.mp4"
+                    >
+
+                        <span class="movie-icon">🐰</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button
+                                type="button"
+                                class="play-movie"
+                                data-title="Big Buck Bunny"
+                                data-video="https://download.blender.org/demo/movies/BBB/BBB-60fps-1080p.mp4"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Big Buck Bunny</h3>
+
+                        <p>
+                            ⭐ 8.5
+                            <span>•</span>
+                            2008
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SINTEL -->
+
+                <article class="movie-card">
+
+                    <div
+                        class="movie-image movie-bg-two"
+                        data-title="Sintel"
+                        data-video="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                    >
+
+                        <span class="movie-icon">🎬</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button
+                                type="button"
+                                class="play-movie"
+                                data-title="Sintel"
+                                data-video="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Sintel</h3>
+
+                        <p>
+                            ⭐ 8.2
+                            <span>•</span>
+                            2010
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TEARS OF STEEL -->
+
+                <article class="movie-card">
+
+                    <div
+                        class="movie-image movie-bg-three"
+                        data-title="Tears of Steel"
+                        data-video="https://download.blender.org/demo/movies/ToS/tears_of_steel_1080p.mov"
+                    >
+
+                        <span class="movie-icon">🤖</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button
+                                type="button"
+                                class="play-movie"
+                                data-title="Tears of Steel"
+                                data-video="https://download.blender.org/demo/movies/ToS/tears_of_steel_1080p.mov"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Tears of Steel</h3>
+
+                        <p>
+                            ⭐ 8.0
+                            <span>•</span>
+                            2012
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ELEPHANTS DREAM -->
+
+                <article class="movie-card">
+
+                    <div
+                        class="movie-image movie-bg-four"
+                        data-title="Elephants Dream"
+                        data-video="https://download.blender.org/ED/ed_1024.avi"
+                    >
+
+                        <span class="movie-icon">🐘</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button
+                                type="button"
+                                class="play-movie"
+                                data-title="Elephants Dream"
+                                data-video="https://download.blender.org/ED/ed_1024.avi"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Elephants Dream</h3>
+
+                        <p>
+                            ⭐ 7.9
+                            <span>•</span>
+                            2006
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- POPULAR TONIGHT -->
+
+        <section class="movies">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">TONIGHT</span>
+                    <h2>Popular Tonight</h2>
+                </div>
+
+            </div>
+
+
+            <div class="movie-list">
+
+                <article class="movie-card">
+
+                    <div
+                        class="movie-image movie-bg-five"
+                        data-title="Big Buck Bunny"
+                        data-video="https://download.blender.org/demo/movies/BBB/BBB-60fps-1080p.mp4"
+                    >
+
+                        <span class="movie-icon">🍿</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button
+                                type="button"
+                                class="play-movie"
+                                data-title="Big Buck Bunny"
+                                data-video="https://download.blender.org/demo/movies/BBB/BBB-60fps-1080p.mp4"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Big Buck Bunny</h3>
+
+                        <p>
+                            ⭐ 8.7
+                            <span>•</span>
+                            2008
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <div
+                        class="movie-image movie-bg-six"
+                        data-title="Sintel"
+                        data-video="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                    >
+
+                        <span class="movie-icon">🍿</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button
+                                type="button"
+                                class="play-movie"
+                                data-title="Sintel"
+                                data-video="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Sintel</h3>
+
+                        <p>
+                            ⭐ 8.4
+                            <span>•</span>
+                            2010
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =========================
+         SERIES PAGE
+    ========================== -->
+
+    <section class="page" id="seriesPage">
+
+        <div class="simple-page">
+
+            <span class="section-label">EXPLORE</span>
+
+            <h1>Series</h1>
+
+            <p>
+                Discover your favorite series and find your next obsession.
+            </p>
+
+        </div>
+
+
+        <section class="movies">
+
+            <div class="section-header">
+
+                <div>
+                    <span class="section-label">TOP PICKS</span>
+                    <h2>Popular Series</h2>
+                </div>
+
+            </div>
+
+
+            <div class="movie-list">
+
+                <article class="movie-card">
+
+                    <div class="movie-image series-bg-one">
+
+                        <span class="movie-icon">📺</span>
+                        <span class="movie-quality">4K</span>
+
+                        <div class="movie-hover">
+
+                            <button type="button">
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Series One</h3>
+
+                        <p>
+                            ⭐ 9.0
+                            <span>•</span>
+                            2026
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <div class="movie-image series-bg-two">
+
+                        <span class="movie-icon">📺</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button type="button">
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Series Two</h3>
+
+                        <p>
+                            ⭐ 8.8
+                            <span>•</span>
+                            2026
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="movie-card">
+
+                    <div class="movie-image series-bg-three">
+
+                        <span class="movie-icon">📺</span>
+                        <span class="movie-quality">HD</span>
+
+                        <div class="movie-hover">
+
+                            <button type="button">
+                                ▶
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-info">
+
+                        <h3>Series Three</h3>
+
+                        <p>
+                            ⭐ 8.6
+                            <span>•</span>
+                            2026
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =========================
+         WATCH TOGETHER
+    ========================== -->
+
+    <section class="page" id="togetherPage">
+
+        <div class="center-page">
+
+            <div class="feature-icon">👥</div>
+
+            <span class="section-label">WATCH TOGETHER</span>
+
+            <h1>Never Watch Alone</h1>
+
+            <p>
+                Create a private room and watch movies together
+                with someone, even when you're far apart.
+            </p>
+
+
+            <div class="together-card">
+
+                <button
+                    class="main-button full-button"
+                    id="createRoom"
+                    type="button"
+                >
+                    ✨ Create a Room
+                </button>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="room-area">
+
+                    <input
+                        id="roomCode"
+                        type="text"
+                        placeholder="Enter room code"
+                        maxlength="8"
+                        autocomplete="off"
+                    >
+
+                    <button
+                        class="secondary-button"
+                        id="joinRoom"
+                        type="button"
+                    >
+                        Join Room
+                    </button>
+
+                </div>
+
+                <p id="roomMessage" class="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACCOUNT
+    ========================== -->
+
+    <section class="page" id="accountPage">
+
+        <div class="center-page">
+
+            <div class="feature-icon">👤</div>
+
+            <span class="section-label">YOUR ACCOUNT</span>
+
+            <h1>Welcome Back</h1>
+
+            <p>
+                Sign in to your Movies Tonight account.
+            </p>
+
+
+            <div class="account-box">
+
+                <label for="email">Email</label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                >
+
+
+                <label for="password">Password</label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                >
+
+
+                <button
+                    class="main-button full-button"
+                    id="loginButton"
+                    type="button"
+                >
+                    Log In
+                </button>
+
+                <button
+                    class="secondary-button full-button"
+                    id="signupButton"
+                    type="button"
+                >
+                    Create Account
+                </button>
+
+                <p id="accountMessage" class="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SETTINGS
+    ========================== -->
+
+    <section class="page" id="settingsPage">
+
+        <div class="center-page">
+
+            <span class="section-label">PREFERENCES</span>
+
+            <h1>Settings</h1>
+
+            <p>
+                Manage your Movies Tonight experience.
+            </p>
+
+
+            <div class="settings-card">
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>🎬 Autoplay</h3>
+
+                        <p>
+                            Automatically play the next episode.
+                        </p>
+
+                    </div>
+
+                    <label class="toggle">
+
+                        <input type="checkbox" checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>🔔 Notifications</h3>
+
+                        <p>
+                            Receive updates about new releases.
+                        </p>
+
+                    </div>
+
+                    <label class="toggle">
+
+                        <input type="checkbox" checked>
+
+                        <span></span>
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="main-button full-button"
+                    id="saveSettings"
+                    type="button"
+                >
+                    Save Settings
+                </button>
+
+                <p id="settingsMessage" class="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOTIFICATIONS
+    ========================== -->
+
+    <section class="page" id="notificationsPage">
+
+        <div class="center-page">
+
+            <span class="section-label">UPDATES</span>
+
+            <h1>Notifications</h1>
+
+            <p>
+                Your latest notifications will appear here.
+            </p>
+
+
+            <div class="empty-state">
+
+                <div>🔔</div>
+
+                <h3>No notifications yet</h3>
+
+                <p>
+                    We'll let you know when something important happens.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LANGUAGE
+    ========================== -->
+
+    <section class="page" id="languagePage">
+
+        <div class="settings-page">
+
+            <div class="settings-header">
+
+                <button
+                    class="back-button"
+                    data-back="moviesPage"
+                    type="button"
+                >
+                    ←
+                </button>
+
+                <div>
+
+                    <span class="section-label">
+                        PREFERENCES
+                    </span>
+
+                    <h1>
+                        Language & Subtitles
+                    </h1>
+
+                    <p>
+                        Customize your viewing experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="language-card">
+
+                <div class="setting-row">
+
+                    <div>
+
+                        <h3>🌐 App Language</h3>
+
+                        <p>
+                            Choose the language of Movies Tonight.
+                        </p>
+
+                    </div>
+
+                    <select id="languageSelect">
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="Arabic">
+                            العربية
+                        </option>
+
+                        <option value="Portuguese">
+                            Português
+                        </option>
+
+                        <option value="French">
+                            Français
+                        </option>
+
+                        <option value="Spanish">
+                            Español
+                        </option>
+
+                        <option value="German">
+                            Deutsch
+                        </option>
+
+                        <option value="Italian">
+                            Italiano
+                        </option>
+
+                        <option value="Turkish">
+                            Türkçe
+                        </option>
+
+                        <option value="Russian">
+                            Русский
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+
+                        <h3>💬 Subtitle Language</h3>
+
+                        <p>
+                            Your preferred subtitle language.
+                        </p>
+
+                    </div>
+
+                    <select id="subtitleSelect">
+
+                        <option value="Arabic">
+                            Arabic
+                        </option>
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="Portuguese">
+                            Portuguese
+                        </option>
+
+                        <option value="French">
+                            French
+                        </option>
+
+                        <option value="Spanish">
+                            Spanish
+                        </option>
+
+                        <option value="German">
+                            German
+                        </option>
+
+                        <option value="Italian">
+                            Italian
+                        </option>
+
+                        <option value="Turkish">
+                            Turkish
+                        </option>
+
+                        <option value="Russian">
+                            Russian
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+
+                        <h3>🔊 Audio Language</h3>
+
+                        <p>
+                            Your preferred audio language.
+                        </p>
+
+                    </div>
+
+                    <select id="audioSelect">
+
+                        <option value="Original Language">
+                            Original Language
+                        </option>
+
+                        <option value="Arabic">
+                            Arabic
+                        </option>
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="Portuguese">
+                            Portuguese
+                        </option>
+
+                        <option value="French">
+                            French
+                        </option>
+
+                        <option value="Spanish">
+                            Spanish
+                        </option>
+
+                        <option value="German">
+                            German
+                        </option>
+
+                        <option value="Italian">
+                            Italian
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="main-button save-button"
+                    id="saveLanguage"
+                    type="button"
+                >
+                    Save Preferences
+                </button>
+
+                <p id="languageMessage" class="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRIVACY
+    ========================== -->
+
+    <section class="page" id="privacyPage">
+
+        <div class="center-page">
+
+            <span class="section-label">SECURITY</span>
+
+            <h1>Privacy</h1>
+
+            <p>
+                Manage your privacy and security settings.
+            </p>
+
+
+            <div class="privacy-card">
+
+                <div class="privacy-item">
+
+                    <span>🔒</span>
+
+                    <div>
+
+                        <h3>Account Privacy</h3>
+
+                        <p>
+                            Your account information is private.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="privacy-item">
+
+                    <span>🛡️</span>
+
+                    <div>
+
+                        <h3>Secure Experience</h3>
+
+                        <p>
+                            We're building a safe and secure viewing experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HELP
+    ========================== -->
+
+    <section class="page" id="helpPage">
+
+        <div class="center-page">
+
+            <div class="feature-icon">❓</div>
+
+            <span class="section-label">SUPPORT</span>
+
+            <h1>Help & Support</h1>
+
+            <p>
+                Need help? Our support center will be available soon.
+            </p>
+
+
+            <button
+                class="main-button"
+                id="contactSupport"
+                type="button"
+            >
+                Contact Support
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DELETE ACCOUNT
+    ========================== -->
+
+    <section class="page" id="deletePage">
+
+        <div class="center-page">
+
+            <div class="danger-icon">⚠</div>
+
+            <span class="section-label danger-label">
+                DANGER ZONE
+            </span>
+
+            <h1>Delete Account</h1>
+
+            <p>
+                Deleting your account is a serious action and
+                may not be reversible.
+            </p>
+
+
+            <div class="danger-card">
+
+                <p>
+                    Please make sure you really want to continue.
+                </p>
+
+                <button
+                    class="delete-button"
+                    id="confirmDelete"
+                    type="button"
+                >
+                    🗑️ Delete My Account
+                </button>
+
+                <p id="deleteMessage" class="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VIDEO PLAYER
+    ========================== -->
+
+    <section
+        class="video-player-section"
+        id="videoPlayerSection"
+    >
+
+        <div class="video-player-box">
+
+            <button
+                class="close-video"
+                id="closeVideo"
+                type="button"
+                aria-label="Close video"
+            >
+                ×
+            </button>
+
+
+            <video
+                id="moviePlayer"
+                controls
+                playsinline
+                preload="metadata"
+            ></video>
+
+
+            <div class="video-info">
+
+                <span class="section-label">
+                    NOW PLAYING
+                </span>
+
+                <h2 id="videoTitle">
+                    Movie
+                </h2>
+
+                <p id="videoDescription">
+                    Enjoy your movie on Movies Tonight.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     PROFILE DROPDOWN
+========================== -->
+
+<section
+    class="profile-section"
+    id="profileSection"
+>
+
+    <div class="profile-box">
+
+        <div class="profile-header">
+
+            <div class="profile-avatar">
+                👤
+            </div>
+
+            <div>
+
+                <h2>Profile</h2>
+
+                <p>
+                    Manage your account
+                </p>
+
+            </div>
+
+            <button
+                class="close-profile"
+                id="closeProfile"
+                type="button"
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="profile-menu">
+
+            <button
+                data-profile-page="accountPage"
+                type="button"
+            >
+
+                <span>👤</span>
+
+                <div>
+
+                    <strong>Account</strong>
+
+                    <small>
+                        Sign in and manage account
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                data-profile-page="settingsPage"
+                type="button"
+            >
+
+                <span>⚙️</span>
+
+                <div>
+
+                    <strong>Settings</strong>
+
+                    <small>
+                        Manage your preferences
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                data-profile-page="notificationsPage"
+                type="button"
+            >
+
+                <span>🔔</span>
+
+                <div>
+
+                    <strong>Notifications</strong>
+
+                    <small>
+                        View your notifications
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                data-profile-page="languagePage"
+                type="button"
+            >
+
+                <span>🌐</span>
+
+                <div>
+
+                    <strong>Language & Subtitles</strong>
+
+                    <small>
+                        Customize languages
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                data-profile-page="privacyPage"
+                type="button"
+            >
+
+                <span>🔒</span>
+
+                <div>
+
+                    <strong>Privacy</strong>
+
+                    <small>
+                        Security and privacy
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                data-profile-page="helpPage"
+                type="button"
+            >
+
+                <span>❓</span>
+
+                <div>
+
+                    <strong>Help & Support</strong>
+
+                    <small>
+                        Get help
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                id="profileLogout"
+                type="button"
+            >
+
+                <span>🚪</span>
+
+                <div>
+
+                    <strong>Log Out</strong>
+
+                    <small>
+                        Sign out of your account
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+
+            <button
+                class="delete-account"
+                data-profile-page="deletePage"
+                type="button"
+            >
+
+                <span>🗑️</span>
+
+                <div>
+
+                    <strong>Delete Account</strong>
+
+                    <small>
+                        Permanently delete your account
+                    </small>
+
+                </div>
+
+                <b>›</b>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MOVIES TONIGHT
+    </div>
+
+    <p>
+        © 2026 Movies Tonight. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
