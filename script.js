@@ -2686,7 +2686,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     );
+/* =========================================
+   LOAD CURRENT USER PROFILE
+========================================= */
 
+async function loadUserProfile() {
+
+    const {
+        data: {
+            session
+        }
+    } = await supabaseClient.auth.getSession();
+
+    if (!session || !session.user) {
+        return;
+    }
+
+    const user = session.user;
+
+    const username =
+        user.user_metadata?.username ||
+        "User";
+
+    const age =
+        user.user_metadata?.age ||
+        "--";
+
+    const email =
+        user.email ||
+        "";
+
+    const profileUsername =
+        document.getElementById("profileUsername");
+
+    const profileEmail =
+        document.getElementById("profileEmail");
+
+    const profileAge =
+        document.getElementById("profileAge");
+
+    if (profileUsername) {
+        profileUsername.textContent = username;
+    }
+
+    if (profileEmail) {
+        profileEmail.textContent = email;
+    }
+
+    if (profileAge) {
+        profileAge.textContent = "Age: " + age;
+    }
+
+}
+
+
+/* Load profile when the website starts */
+loadUserProfile();
+
+
+/* Update profile when login state changes */
+
+supabaseClient.auth.onAuthStateChange(
+    function (event, session) {
+
+        if (session) {
+            loadUserProfile();
+        }
+
+    }
+);
     /* =========================================
        THEME SYSTEM
     ========================================= */
