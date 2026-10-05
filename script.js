@@ -2247,11 +2247,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         function () {
 
                             showPage(
-                                "homePage"
+                                "moviespage"
                             );
 
                             setActiveNav(
-                                "homePage"
+                                "moviespage"
+                                
                             );
 
                         },
@@ -3364,5 +3365,1066 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(
         "MOVIES TONIGHT loaded successfully."
     );
+/* =========================================
+   REAL USER PROFILE SYSTEM
+   PROFILE + AVATAR + EDIT + PASSWORD
+========================================= */
 
+const profileBox = document.querySelector(".profile-box");
+
+if (profileBox) {
+
+    const profileAvatar =
+        profileBox.querySelector(".profile-avatar");
+
+    /* -----------------------------------------
+       CREATE REAL PROFILE AREA
+    ----------------------------------------- */
+
+    const realProfile = document.createElement("div");
+
+    realProfile.id = "realProfileArea";
+
+    realProfile.innerHTML = `
+        <div id="profileUserCard">
+
+            <div id="realProfileAvatar"
+                 style="
+                    width:90px;
+                    height:90px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    margin:0 auto 12px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    background:#222;
+                    color:white;
+                    font-size:32px;
+                    font-weight:bold;
+                 ">
+                👤
+            </div>
+
+            <div style="text-align:center;">
+
+                <h3 id="realProfileUsername"
+                    style="margin:5px 0;">
+                    Guest
+                </h3>
+
+                <p id="realProfileEmail"
+                   style="
+                      margin:4px 0;
+                      opacity:.7;
+                      word-break:break-word;
+                   ">
+                    Not logged in
+                </p>
+
+                <p id="realProfileAge"
+                   style="
+                      margin:4px 0 14px;
+                      opacity:.7;
+                   ">
+                </p>
+
+            </div>
+
+            <div style="
+                display:flex;
+                gap:8px;
+                justify-content:center;
+                flex-wrap:wrap;
+                margin-bottom:18px;
+            ">
+
+                <button
+                    type="button"
+                    id="editProfileButton">
+                    ✏️ Edit Profile
+                </button>
+
+                <button
+                    type="button"
+                    id="changePasswordButton">
+                    🔐 Change Password
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="profileEditArea"
+             style="display:none;">
+
+            <h3 style="margin-bottom:15px;">
+                ✏️ Edit Profile
+            </h3>
+
+            <label style="display:block;margin-bottom:6px;">
+                Username
+            </label>
+
+            <input
+                id="editProfileUsername"
+                type="text"
+                maxlength="30"
+                placeholder="Username"
+                style="width:100%;box-sizing:border-box;margin-bottom:12px;"
+            >
+
+            <label style="display:block;margin-bottom:6px;">
+                Age
+            </label>
+
+            <input
+                id="editProfileAge"
+                type="number"
+                min="13"
+                max="120"
+                placeholder="Age"
+                style="width:100%;box-sizing:border-box;margin-bottom:12px;"
+            >
+
+            <label style="display:block;margin-bottom:6px;">
+                Profile Photo
+            </label>
+
+            <input
+                id="profilePhotoInput"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+                style="width:100%;margin-bottom:14px;"
+            >
+
+            <div style="
+                display:flex;
+                gap:8px;
+                flex-wrap:wrap;
+            ">
+
+                <button
+                    type="button"
+                    id="saveProfileButton">
+                    💾 Save Profile
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelEditProfileButton">
+                    Cancel
+                </button>
+
+            </div>
+
+            <p
+                id="profileEditMessage"
+                style="margin-top:12px;">
+            </p>
+
+        </div>
+
+        <div id="passwordEditArea"
+             style="display:none;">
+
+            <h3 style="margin-bottom:15px;">
+                🔐 Change Password
+            </h3>
+
+            <input
+                id="newProfilePassword"
+                type="password"
+                minlength="6"
+                placeholder="New password"
+                style="width:100%;box-sizing:border-box;margin-bottom:12px;"
+            >
+
+            <input
+                id="confirmProfilePassword"
+                type="password"
+                minlength="6"
+                placeholder="Confirm new password"
+                style="width:100%;box-sizing:border-box;margin-bottom:14px;"
+            >
+
+            <div style="
+                display:flex;
+                gap:8px;
+                flex-wrap:wrap;
+            ">
+
+                <button
+                    type="button"
+                    id="saveProfilePasswordButton">
+                    🔐 Save Password
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelPasswordButton">
+                    Cancel
+                </button>
+
+            </div>
+
+            <p
+                id="passwordEditMessage"
+                style="margin-top:12px;">
+            </p>
+
+        </div>
+    `;
+
+    const profileHeader =
+        profileBox.querySelector(".profile-header");
+
+    if (profileHeader) {
+        profileHeader.insertAdjacentElement(
+            "afterend",
+            realProfile
+        );
+    } else {
+        profileBox.prepend(realProfile);
+    }
+
+    /* -----------------------------------------
+       PROFILE ELEMENTS
+    ----------------------------------------- */
+
+    const realProfileAvatar =
+        document.getElementById(
+            "realProfileAvatar"
+        );
+
+    const realProfileUsername =
+        document.getElementById(
+            "realProfileUsername"
+        );
+
+    const realProfileEmail =
+        document.getElementById(
+            "realProfileEmail"
+        );
+
+    const realProfileAge =
+        document.getElementById(
+            "realProfileAge"
+        );
+
+    const editProfileButton =
+        document.getElementById(
+            "editProfileButton"
+        );
+
+    const changePasswordButton =
+        document.getElementById(
+            "changePasswordButton"
+        );
+
+    const profileEditArea =
+        document.getElementById(
+            "profileEditArea"
+        );
+
+    const passwordEditArea =
+        document.getElementById(
+            "passwordEditArea"
+        );
+
+    const editProfileUsername =
+        document.getElementById(
+            "editProfileUsername"
+        );
+
+    const editProfileAge =
+        document.getElementById(
+            "editProfileAge"
+        );
+
+    const profilePhotoInput =
+        document.getElementById(
+            "profilePhotoInput"
+        );
+
+    const saveProfileButton =
+        document.getElementById(
+            "saveProfileButton"
+        );
+
+    const cancelEditProfileButton =
+        document.getElementById(
+            "cancelEditProfileButton"
+        );
+
+    const profileEditMessage =
+        document.getElementById(
+            "profileEditMessage"
+        );
+
+    const newProfilePassword =
+        document.getElementById(
+            "newProfilePassword"
+        );
+
+    const confirmProfilePassword =
+        document.getElementById(
+            "confirmProfilePassword"
+        );
+
+    const saveProfilePasswordButton =
+        document.getElementById(
+            "saveProfilePasswordButton"
+        );
+
+    const cancelPasswordButton =
+        document.getElementById(
+            "cancelPasswordButton"
+        );
+
+    const passwordEditMessage =
+        document.getElementById(
+            "passwordEditMessage"
+        );
+
+    /* -----------------------------------------
+       AVATAR HELPER
+    ----------------------------------------- */
+
+    function setProfileAvatar(
+        user
+    ) {
+
+        if (!realProfileAvatar) {
+            return;
+        }
+
+        const avatarUrl =
+            user?.user_metadata?.avatar_url;
+
+        if (avatarUrl) {
+
+            realProfileAvatar.innerHTML = `
+                <img
+                    src="${avatarUrl}"
+                    alt="Profile"
+                    style="
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                    "
+                >
+            `;
+
+        } else {
+
+            const username =
+                user?.user_metadata?.username ||
+                user?.email ||
+                "U";
+
+            const firstLetter =
+                username
+                    .trim()
+                    .charAt(0)
+                    .toUpperCase();
+
+            realProfileAvatar.textContent =
+                firstLetter || "👤";
+
+        }
+
+        /* Also update the old profile avatar */
+        if (profileAvatar) {
+
+            if (avatarUrl) {
+
+                profileAvatar.innerHTML = `
+                    <img
+                        src="${avatarUrl}"
+                        alt="Profile"
+                        style="
+                            width:100%;
+                            height:100%;
+                            object-fit:cover;
+                            border-radius:50%;
+                        "
+                    >
+                `;
+
+            } else {
+
+                profileAvatar.textContent =
+                    "👤";
+
+            }
+
+        }
+
+    }
+
+    /* -----------------------------------------
+       UPDATE PROFILE UI
+    ----------------------------------------- */
+
+    async function updateRealProfile(
+        user
+    ) {
+
+        if (!user) {
+
+            if (realProfileUsername) {
+                realProfileUsername.textContent =
+                    "Guest";
+            }
+
+            if (realProfileEmail) {
+                realProfileEmail.textContent =
+                    "Not logged in";
+            }
+
+            if (realProfileAge) {
+                realProfileAge.textContent =
+                    "";
+            }
+
+            setProfileAvatar(null);
+
+            return;
+
+        }
+
+        const metadata =
+            user.user_metadata || {};
+
+        const username =
+            metadata.username ||
+            "User";
+
+        const age =
+            metadata.age || "";
+
+        if (realProfileUsername) {
+
+            realProfileUsername.textContent =
+                username;
+
+        }
+
+        if (realProfileEmail) {
+
+            realProfileEmail.textContent =
+                user.email || "";
+
+        }
+
+        if (realProfileAge) {
+
+            realProfileAge.textContent =
+                age
+                    ? "Age: " + age
+                    : "";
+
+        }
+
+        if (editProfileUsername) {
+
+            editProfileUsername.value =
+                username;
+
+        }
+
+        if (editProfileAge) {
+
+            editProfileAge.value =
+                age;
+
+        }
+
+        setProfileAvatar(user);
+
+    }
+
+    /* -----------------------------------------
+       OPEN EDIT PROFILE
+    ----------------------------------------- */
+
+    if (editProfileButton) {
+
+        editProfileButton.addEventListener(
+            "click",
+            async function () {
+
+                const {
+                    data
+                } =
+                    await supabaseClient.auth.getUser();
+
+                if (!data.user) {
+
+                    alert(
+                        "Please log in first."
+                    );
+
+                    return;
+
+                }
+
+                if (profileEditArea) {
+
+                    profileEditArea.style.display =
+                        "block";
+
+                }
+
+                if (passwordEditArea) {
+
+                    passwordEditArea.style.display =
+                        "none";
+
+                }
+
+                updateRealProfile(
+                    data.user
+                );
+
+            }
+        );
+
+    }
+
+    /* -----------------------------------------
+       OPEN CHANGE PASSWORD
+    ----------------------------------------- */
+
+    if (changePasswordButton) {
+
+        changePasswordButton.addEventListener(
+            "click",
+            async function () {
+
+                const {
+                    data
+                } =
+                    await supabaseClient.auth.getUser();
+
+                if (!data.user) {
+
+                    alert(
+                        "Please log in first."
+                    );
+
+                    return;
+
+                }
+
+                if (passwordEditArea) {
+
+                    passwordEditArea.style.display =
+                        "block";
+
+                }
+
+                if (profileEditArea) {
+
+                    profileEditArea.style.display =
+                        "none";
+
+                }
+
+                if (newProfilePassword) {
+                    newProfilePassword.value = "";
+                }
+
+                if (confirmProfilePassword) {
+                    confirmProfilePassword.value = "";
+                }
+
+                if (passwordEditMessage) {
+                    passwordEditMessage.textContent = "";
+                }
+
+            }
+        );
+
+    }
+
+    /* -----------------------------------------
+       CANCEL EDIT PROFILE
+    ----------------------------------------- */
+
+    if (cancelEditProfileButton) {
+
+        cancelEditProfileButton.addEventListener(
+            "click",
+            function () {
+
+                if (profileEditArea) {
+
+                    profileEditArea.style.display =
+                        "none";
+
+                }
+
+                if (profileEditMessage) {
+
+                    profileEditMessage.textContent =
+                        "";
+
+                }
+
+            }
+        );
+
+    }
+
+    /* -----------------------------------------
+       CANCEL PASSWORD
+    ----------------------------------------- */
+
+    if (cancelPasswordButton) {
+
+        cancelPasswordButton.addEventListener(
+            "click",
+            function () {
+
+                if (passwordEditArea) {
+
+                    passwordEditArea.style.display =
+                        "none";
+
+                }
+
+                if (passwordEditMessage) {
+
+                    passwordEditMessage.textContent =
+                        "";
+
+                }
+
+            }
+        );
+
+    }
+
+    /* -----------------------------------------
+       SAVE PROFILE
+    ----------------------------------------- */
+
+    if (saveProfileButton) {
+
+        saveProfileButton.addEventListener(
+            "click",
+            async function () {
+
+                const {
+                    data: userData,
+                    error: userError
+                } =
+                    await supabaseClient.auth.getUser();
+
+                if (
+                    userError ||
+                    !userData.user
+                ) {
+
+                    if (profileEditMessage) {
+
+                        profileEditMessage.textContent =
+                            "Please log in first.";
+
+                    }
+
+                    return;
+
+                }
+
+                const user =
+                    userData.user;
+
+                const username =
+                    editProfileUsername
+                        ? editProfileUsername.value.trim()
+                        : "";
+
+                const age =
+                    editProfileAge
+                        ? Number(
+                            editProfileAge.value
+                          )
+                        : 0;
+
+                if (
+                    username.length < 2 ||
+                    username.length > 30
+                ) {
+
+                    profileEditMessage.textContent =
+                        "Username must be between 2 and 30 characters.";
+
+                    return;
+
+                }
+
+                if (
+                    !Number.isInteger(age) ||
+                    age < 13 ||
+                    age > 120
+                ) {
+
+                    profileEditMessage.textContent =
+                        "Age must be between 13 and 120.";
+
+                    return;
+
+                }
+
+                saveProfileButton.disabled =
+                    true;
+
+                profileEditMessage.textContent =
+                    "Saving profile...";
+
+                let avatarUrl =
+                    user.user_metadata?.avatar_url ||
+                    null;
+
+                /* -----------------------------------------
+                   UPLOAD PROFILE PHOTO
+                ----------------------------------------- */
+
+                if (
+                    profilePhotoInput &&
+                    profilePhotoInput.files &&
+                    profilePhotoInput.files.length > 0
+                ) {
+
+                    const file =
+                        profilePhotoInput.files[0];
+
+                    const allowedTypes = [
+                        "image/jpeg",
+                        "image/png",
+                        "image/webp"
+                    ];
+
+                    if (
+                        !allowedTypes.includes(
+                            file.type
+                        )
+                    ) {
+
+                        profileEditMessage.textContent =
+                            "Please choose JPG, PNG or WEBP.";
+
+                        saveProfileButton.disabled =
+                            false;
+
+                        return;
+
+                    }
+
+                    if (
+                        file.size >
+                        5 * 1024 * 1024
+                    ) {
+
+                        profileEditMessage.textContent =
+                            "Image must be smaller than 5 MB.";
+
+                        saveProfileButton.disabled =
+                            false;
+
+                        return;
+
+                    }
+
+                    const extension =
+                        file.name
+                            .split(".")
+                            .pop()
+                            .toLowerCase();
+
+                    const filePath =
+                        user.id +
+                        "/avatar-" +
+                        Date.now() +
+                        "." +
+                        extension;
+
+                    const {
+                        error: uploadError
+                    } =
+                        await supabaseClient
+                            .storage
+                            .from("avatars")
+                            .upload(
+                                filePath,
+                                file,
+                                {
+                                    cacheControl: "3600",
+                                    upsert: false
+                                }
+                            );
+
+                    if (uploadError) {
+
+                        profileEditMessage.textContent =
+                            "Photo upload failed: " +
+                            uploadError.message;
+
+                        saveProfileButton.disabled =
+                            false;
+
+                        return;
+
+                    }
+
+                    const {
+                        data: publicData
+                    } =
+                        supabaseClient
+                            .storage
+                            .from("avatars")
+                            .getPublicUrl(
+                                filePath
+                            );
+
+                    avatarUrl =
+                        publicData.publicUrl;
+
+                }
+
+                /* -----------------------------------------
+                   UPDATE USER METADATA
+                ----------------------------------------- */
+
+                const {
+                    data: updatedData,
+                    error: updateError
+                } =
+                    await supabaseClient.auth.updateUser({
+
+                        data: {
+
+                            username: username,
+
+                            age: age,
+
+                            avatar_url: avatarUrl
+
+                        }
+
+                    });
+
+                if (updateError) {
+
+                    profileEditMessage.textContent =
+                        updateError.message;
+
+                    saveProfileButton.disabled =
+                        false;
+
+                    return;
+
+                }
+
+                await updateRealProfile(
+                    updatedData.user
+                );
+
+                profileEditMessage.textContent =
+                    "Profile updated successfully!";
+
+                if (profilePhotoInput) {
+
+                    profilePhotoInput.value =
+                        "";
+
+                }
+
+                setTimeout(
+                    function () {
+
+                        if (profileEditArea) {
+
+                            profileEditArea.style.display =
+                                "none";
+
+                        }
+
+                        if (profileEditMessage) {
+
+                            profileEditMessage.textContent =
+                                "";
+
+                        }
+
+                    },
+                    1200
+                );
+
+                saveProfileButton.disabled =
+                    false;
+
+            }
+        );
+
+    }
+
+    /* -----------------------------------------
+       CHANGE PASSWORD
+    ----------------------------------------- */
+
+    if (saveProfilePasswordButton) {
+
+        saveProfilePasswordButton.addEventListener(
+            "click",
+            async function () {
+
+                const newPassword =
+                    newProfilePassword
+                        ? newProfilePassword.value
+                        : "";
+
+                const confirmPassword =
+                    confirmProfilePassword
+                        ? confirmProfilePassword.value
+                        : "";
+
+                if (
+                    newPassword.length < 6
+                ) {
+
+                    passwordEditMessage.textContent =
+                        "Password must be at least 6 characters.";
+
+                    return;
+
+                }
+
+                if (
+                    newPassword !==
+                    confirmPassword
+                ) {
+
+                    passwordEditMessage.textContent =
+                        "Passwords do not match.";
+
+                    return;
+
+                }
+
+                saveProfilePasswordButton.disabled =
+                    true;
+
+                passwordEditMessage.textContent =
+                    "Changing password...";
+
+                const {
+                    error
+                } =
+                    await supabaseClient.auth.updateUser({
+
+                        password:
+                            newPassword
+
+                    });
+
+                if (error) {
+
+                    passwordEditMessage.textContent =
+                        error.message;
+
+                    saveProfilePasswordButton.disabled =
+                        false;
+
+                    return;
+
+                }
+
+                passwordEditMessage.textContent =
+                    "Password changed successfully!";
+
+                newProfilePassword.value =
+                    "";
+
+                confirmProfilePassword.value =
+                    "";
+
+                setTimeout(
+                    function () {
+
+                        if (passwordEditArea) {
+
+                            passwordEditArea.style.display =
+                                "none";
+
+                        }
+
+                        if (passwordEditMessage) {
+
+                            passwordEditMessage.textContent =
+                                "";
+
+                        }
+
+                    },
+                    1500
+                );
+
+                saveProfilePasswordButton.disabled =
+                    false;
+
+            }
+        );
+
+    }
+
+    /* -----------------------------------------
+       LOAD PROFILE ON START
+    ----------------------------------------- */
+
+    async function loadRealProfile() {
+
+        const {
+            data
+        } =
+            await supabaseClient.auth.getUser();
+
+        await updateRealProfile(
+            data.user || null
+        );
+
+    }
+
+    loadRealProfile();
+
+    /* -----------------------------------------
+       UPDATE PROFILE AFTER LOGIN / LOGOUT
+    ----------------------------------------- */
+
+    supabaseClient.auth.onAuthStateChange(
+        function (
+            event,
+            session
+        ) {
+
+            setTimeout(
+                function () {
+
+                    updateRealProfile(
+                        session
+                            ? session.user
+                            : null
+                    );
+
+                },
+                0
+            );
+
+        }
+    );
+
+}
 });
