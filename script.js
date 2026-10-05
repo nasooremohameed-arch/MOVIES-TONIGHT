@@ -5,10 +5,11 @@ const supabaseClient = supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY
 );
+
 /* =========================================
    MOVIES TONIGHT
    MAIN JAVASCRIPT
-   VERSION: LANGUAGE + THEME + SEARCH
+   SUPABASE AUTH + LANGUAGE + THEME + SEARCH
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -109,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Please enter your email and password.",
             invalidEmail: "Please enter a valid email address.",
             loginSuccess: "You are logged in successfully.",
-            signupSoon: "Account creation will be available soon.",
+            signupSuccess: "Account created successfully!",
+            confirmEmail: "Account created! Please check your email to confirm your account.",
             loggedOut: "You have been logged out.",
             settingsSaved: "Settings saved successfully.",
             preferencesSaved: "Preferences saved successfully.",
@@ -197,7 +199,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "الرجاء إدخال البريد الإلكتروني وكلمة المرور.",
             invalidEmail: "الرجاء إدخال بريد إلكتروني صحيح.",
             loginSuccess: "تم تسجيل دخولك بنجاح.",
-            signupSoon: "إنشاء الحساب سيكون متاحًا قريبًا.",
+            signupSuccess: "تم إنشاء الحساب بنجاح!",
+            confirmEmail: "تم إنشاء الحساب! تحقق من بريدك الإلكتروني لتأكيد الحساب.",
             loggedOut: "تم تسجيل خروجك.",
             settingsSaved: "تم حفظ الإعدادات بنجاح.",
             preferencesSaved: "تم حفظ التفضيلات بنجاح.",
@@ -285,7 +288,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Įveskite el. paštą ir slaptažodį.",
             invalidEmail: "Įveskite galiojantį el. pašto adresą.",
             loginSuccess: "Sėkmingai prisijungėte.",
-            signupSoon: "Paskyros kūrimas bus pasiekiamas netrukus.",
+            signupSuccess: "Paskyra sėkmingai sukurta!",
+            confirmEmail: "Paskyra sukurta! Patikrinkite el. paštą ir patvirtinkite paskyrą.",
             loggedOut: "Atsijungėte.",
             settingsSaved: "Nustatymai išsaugoti.",
             preferencesSaved: "Pasirinkimai išsaugoti.",
@@ -373,7 +377,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Введите электронную почту и пароль.",
             invalidEmail: "Введите правильный адрес электронной почты.",
             loginSuccess: "Вы успешно вошли.",
-            signupSoon: "Создание аккаунта скоро будет доступно.",
+            signupSuccess: "Аккаунт успешно создан!",
+            confirmEmail: "Аккаунт создан! Проверьте электронную почту для подтверждения.",
             loggedOut: "Вы вышли из аккаунта.",
             settingsSaved: "Настройки сохранены.",
             preferencesSaved: "Настройки языка сохранены.",
@@ -424,6 +429,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Вигляд",
             darkMode: "Темний режим",
             autoplay: "Автовідтворення",
+            notificationSettings: "Сповіщення",
             searchLanguage: "🔎 Пошук мови",
             typeLanguage: "Введіть назву мови...",
             roomCode: "Код кімнати",
@@ -460,7 +466,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Введіть електронну пошту та пароль.",
             invalidEmail: "Введіть правильну електронну адресу.",
             loginSuccess: "Ви успішно увійшли.",
-            signupSoon: "Створення акаунта буде доступне незабаром.",
+            signupSuccess: "Акаунт успішно створено!",
+            confirmEmail: "Акаунт створено! Перевірте електронну пошту для підтвердження.",
             loggedOut: "Ви вийшли з акаунта.",
             settingsSaved: "Налаштування збережено.",
             preferencesSaved: "Налаштування збережено.",
@@ -547,7 +554,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Digite seu e-mail e senha.",
             invalidEmail: "Digite um endereço de e-mail válido.",
             loginSuccess: "Login realizado com sucesso.",
-            signupSoon: "A criação de contas estará disponível em breve.",
+            signupSuccess: "Conta criada com sucesso!",
+            confirmEmail: "Conta criada! Verifique seu e-mail para confirmar sua conta.",
             loggedOut: "Você saiu da conta.",
             settingsSaved: "Configurações salvas com sucesso.",
             preferencesSaved: "Preferências salvas com sucesso.",
@@ -634,7 +642,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Veuillez entrer votre e-mail et votre mot de passe.",
             invalidEmail: "Veuillez entrer une adresse e-mail valide.",
             loginSuccess: "Vous êtes connecté.",
-            signupSoon: "La création de compte sera bientôt disponible.",
+            signupSuccess: "Compte créé avec succès !",
+            confirmEmail: "Compte créé ! Vérifiez votre e-mail pour confirmer votre compte.",
             loggedOut: "Vous êtes déconnecté.",
             settingsSaved: "Paramètres enregistrés.",
             preferencesSaved: "Préférences enregistrées.",
@@ -721,7 +730,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Introduce tu correo electrónico y contraseña.",
             invalidEmail: "Introduce una dirección de correo válida.",
             loginSuccess: "Has iniciado sesión correctamente.",
-            signupSoon: "La creación de cuentas estará disponible pronto.",
+            signupSuccess: "¡Cuenta creada correctamente!",
+            confirmEmail: "¡Cuenta creada! Revisa tu correo electrónico para confirmar tu cuenta.",
             loggedOut: "Has cerrado sesión.",
             settingsSaved: "Configuración guardada correctamente.",
             preferencesSaved: "Preferencias guardadas correctamente.",
@@ -808,7 +818,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Bitte gib deine E-Mail und dein Passwort ein.",
             invalidEmail: "Bitte gib eine gültige E-Mail-Adresse ein.",
             loginSuccess: "Du wurdest erfolgreich angemeldet.",
-            signupSoon: "Die Kontoerstellung ist bald verfügbar.",
+            signupSuccess: "Konto erfolgreich erstellt!",
+            confirmEmail: "Konto erstellt! Bitte überprüfe deine E-Mail zur Bestätigung.",
             loggedOut: "Du wurdest abgemeldet.",
             settingsSaved: "Einstellungen erfolgreich gespeichert.",
             preferencesSaved: "Einstellungen erfolgreich gespeichert.",
@@ -895,7 +906,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Inserisci email e password.",
             invalidEmail: "Inserisci un indirizzo email valido.",
             loginSuccess: "Accesso effettuato con successo.",
-            signupSoon: "La creazione dell'account sarà disponibile presto.",
+            signupSuccess: "Account creato con successo!",
+            confirmEmail: "Account creato! Controlla la tua email per confermare l'account.",
             loggedOut: "Hai effettuato il logout.",
             settingsSaved: "Impostazioni salvate.",
             preferencesSaved: "Preferenze salvate.",
@@ -982,7 +994,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loginRequired: "Lütfen e-posta ve şifrenizi girin.",
             invalidEmail: "Geçerli bir e-posta adresi girin.",
             loginSuccess: "Başarıyla giriş yaptınız.",
-            signupSoon: "Hesap oluşturma yakında kullanılabilir olacak.",
+            signupSuccess: "Hesap başarıyla oluşturuldu!",
+            confirmEmail: "Hesap oluşturuldu! Onaylamak için e-postanızı kontrol edin.",
             loggedOut: "Çıkış yaptınız.",
             settingsSaved: "Ayarlar başarıyla kaydedildi.",
             preferencesSaved: "Tercihler başarıyla kaydedildi.",
@@ -1081,12 +1094,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        const rtlLanguages = [
-            "Arabic"
-        ];
-
-
-        if (rtlLanguages.includes(language)) {
+        if (language === "Arabic") {
 
             document.documentElement.setAttribute("dir", "rtl");
             document.documentElement.setAttribute("lang", "ar");
@@ -1379,7 +1387,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       LOGIN
+       LOGIN - SUPABASE
     ========================================= */
 
     const loginButton =
@@ -1402,13 +1410,13 @@ document.addEventListener("DOMContentLoaded", function () {
         accountMessage
     ) {
 
-        loginButton.addEventListener("click", function () {
+        loginButton.addEventListener("click", async function () {
 
             const email =
                 emailInput.value.trim();
 
             const password =
-                passwordInput.value.trim();
+                passwordInput.value;
 
 
             if (email === "" || password === "") {
@@ -1429,8 +1437,50 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
+            loginButton.disabled = true;
+
             accountMessage.textContent =
-                t("loginSuccess");
+                "Logging in...";
+
+
+            const { data, error } =
+                await supabaseClient.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+
+            if (error) {
+
+                accountMessage.textContent =
+                    error.message;
+
+                loginButton.disabled = false;
+
+                return;
+            }
+
+
+            if (data.session) {
+
+                accountMessage.textContent =
+                    t("loginSuccess");
+
+                emailInput.value = "";
+                passwordInput.value = "";
+
+
+                setTimeout(function () {
+
+                    showPage("homePage");
+                    setActiveNav("homePage");
+
+                }, 800);
+
+            }
+
+
+            loginButton.disabled = false;
 
         });
 
@@ -1438,18 +1488,101 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       CREATE ACCOUNT
+       CREATE ACCOUNT - SUPABASE
     ========================================= */
 
     const signupButton =
         document.getElementById("signupButton");
 
+
     if (signupButton && accountMessage) {
 
-        signupButton.addEventListener("click", function () {
+        signupButton.addEventListener("click", async function () {
+
+            const email =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value;
+
+
+            if (email === "" || password === "") {
+
+                accountMessage.textContent =
+                    t("loginRequired");
+
+                return;
+            }
+
+
+            if (!email.includes("@")) {
+
+                accountMessage.textContent =
+                    t("invalidEmail");
+
+                return;
+            }
+
+
+            if (password.length < 6) {
+
+                accountMessage.textContent =
+                    "Password must be at least 6 characters.";
+
+                return;
+            }
+
+
+            signupButton.disabled = true;
 
             accountMessage.textContent =
-                t("signupSoon");
+                "Creating account...";
+
+
+            const { data, error } =
+                await supabaseClient.auth.signUp({
+                    email: email,
+                    password: password
+                });
+
+
+            if (error) {
+
+                accountMessage.textContent =
+                    error.message;
+
+                signupButton.disabled = false;
+
+                return;
+            }
+
+
+            emailInput.value = "";
+            passwordInput.value = "";
+
+
+            if (data.session) {
+
+                accountMessage.textContent =
+                    t("signupSuccess");
+
+
+                setTimeout(function () {
+
+                    showPage("homePage");
+                    setActiveNav("homePage");
+
+                }, 800);
+
+            } else {
+
+                accountMessage.textContent =
+                    t("confirmEmail");
+
+            }
+
+
+            signupButton.disabled = false;
 
         });
 
@@ -1457,21 +1590,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       LOG OUT
+       LOG OUT - SUPABASE
     ========================================= */
 
     const profileLogout =
         document.getElementById("profileLogout");
 
+
     if (profileLogout) {
 
-        profileLogout.addEventListener("click", function () {
+        profileLogout.addEventListener("click", async function () {
 
             if (profileSection) {
                 profileSection.classList.remove("show");
             }
 
+
+            const { error } =
+                await supabaseClient.auth.signOut();
+
+
+            if (error) {
+
+                if (accountMessage) {
+                    accountMessage.textContent =
+                        error.message;
+                }
+
+                return;
+            }
+
+
             showPage("accountPage");
+
 
             navLinks.forEach(function (link) {
                 link.classList.remove("active");
@@ -1488,6 +1639,64 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+
+
+    /* =========================================
+       CHECK CURRENT SESSION
+    ========================================= */
+
+    async function checkAuthSession() {
+
+        const {
+            data: { session }
+        } = await supabaseClient.auth.getSession();
+
+
+        if (session) {
+
+            console.log(
+                "Logged in:",
+                session.user.email
+            );
+
+        } else {
+
+            console.log(
+                "No user logged in."
+            );
+
+        }
+
+    }
+
+
+    checkAuthSession();
+
+
+    /* =========================================
+       AUTH STATE LISTENER
+    ========================================= */
+
+    supabaseClient.auth.onAuthStateChange(
+        function (event, session) {
+
+            if (session) {
+
+                console.log(
+                    "Authenticated:",
+                    session.user.email
+                );
+
+            } else {
+
+                console.log(
+                    "User logged out."
+                );
+
+            }
+
+        }
+    );
 
 
     /* =========================================
