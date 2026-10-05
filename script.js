@@ -1,5 +1,5 @@
 const SUPABASE_URL = "https://eoljotwalafeoammucqy.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_O2yn6QzIczqG0X351bZbaQ_uAUXl3U9";
+const SUPABASE_PUBLISHABLE_KEY  ="sb_publishable_O2yn6QzIczqG0X351bZbaQ_uAUXl3U9";
 
 const supabaseClient = supabase.createClient(
     SUPABASE_URL,
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
     const profileButtons = document.querySelectorAll("[data-profile-page]");
     const pages = document.querySelectorAll(".page");
-
 
     /* =========================================
        TRANSLATIONS
@@ -81,8 +80,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Join Room",
             login: "Login",
             signup: "Create Account",
+            logIn: "Log In",
+            createAccount: "Create Account",
+            welcomeBack: "Welcome Back",
+            signInDescription: "Sign in to your Movies Tonight account.",
             email: "Email",
             password: "Password",
+            username: "Username",
+            age: "Age",
+            enterEmail: "Enter your email",
+            enterPassword: "Enter your password",
+            enterUsername: "Enter your username",
+            enterAge: "Enter your age",
+            createPassword: "Create a password",
+            confirmPassword: "Confirm Password",
+            confirmYourPassword: "Confirm your password",
+            backToLogin: "Back to Login",
+            creatingAccount: "Creating account...",
+            loggingIn: "Logging in...",
+            passwordTooShort: "Password must be at least 6 characters.",
+            passwordMismatch: "Passwords do not match.",
+            usernameRequired: "Please enter a username.",
+            ageRequired: "Please enter your age.",
+            ageInvalid: "Age must be between 13 and 120.",
+            signupInvalid: "Please complete all fields.",
+            accountCreated: "Account created successfully!",
             welcome: "WELCOME TO MOVIES TONIGHT",
             tagline: "Your place for movies, series and unforgettable nights.",
             support: "Contact Support",
@@ -170,8 +192,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "انضمام للغرفة",
             login: "تسجيل الدخول",
             signup: "إنشاء حساب",
+            logIn: "تسجيل الدخول",
+            createAccount: "إنشاء حساب",
+            welcomeBack: "مرحبًا بعودتك",
+            signInDescription: "سجّل الدخول إلى حسابك في Movies Tonight.",
             email: "البريد الإلكتروني",
             password: "كلمة المرور",
+            username: "اسم المستخدم",
+            age: "العمر",
+            enterEmail: "أدخل بريدك الإلكتروني",
+            enterPassword: "أدخل كلمة المرور",
+            enterUsername: "أدخل اسم المستخدم",
+            enterAge: "أدخل عمرك",
+            createPassword: "أنشئ كلمة مرور",
+            confirmPassword: "تأكيد كلمة المرور",
+            confirmYourPassword: "أعد كتابة كلمة المرور",
+            backToLogin: "العودة لتسجيل الدخول",
+            creatingAccount: "جاري إنشاء الحساب...",
+            loggingIn: "جاري تسجيل الدخول...",
+            passwordTooShort: "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.",
+            passwordMismatch: "كلمتا المرور غير متطابقتين.",
+            usernameRequired: "الرجاء إدخال اسم المستخدم.",
+            ageRequired: "الرجاء إدخال العمر.",
+            ageInvalid: "العمر يجب أن يكون بين 13 و120.",
+            signupInvalid: "الرجاء إكمال جميع الحقول.",
+            accountCreated: "تم إنشاء الحساب بنجاح!",
             welcome: "مرحبًا بك في MOVIES TONIGHT",
             tagline: "مكانك للأفلام والمسلسلات والليالي التي لا تُنسى.",
             support: "تواصل مع الدعم",
@@ -259,8 +304,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Prisijungti",
             login: "Prisijungti",
             signup: "Sukurti paskyrą",
+            logIn: "Prisijungti",
+            createAccount: "Sukurti paskyrą",
+            welcomeBack: "Sveiki sugrįžę",
+            signInDescription: "Prisijunkite prie savo Movies Tonight paskyros.",
             email: "El. paštas",
             password: "Slaptažodis",
+            username: "Naudotojo vardas",
+            age: "Amžius",
+            enterEmail: "Įveskite el. paštą",
+            enterPassword: "Įveskite slaptažodį",
+            enterUsername: "Įveskite naudotojo vardą",
+            enterAge: "Įveskite savo amžių",
+            createPassword: "Sukurkite slaptažodį",
+            confirmPassword: "Patvirtinkite slaptažodį",
+            confirmYourPassword: "Pakartokite slaptažodį",
+            backToLogin: "Grįžti į prisijungimą",
+            creatingAccount: "Kuriama paskyra...",
+            loggingIn: "Jungiamasi...",
+            passwordTooShort: "Slaptažodis turi būti bent 6 simbolių.",
+            passwordMismatch: "Slaptažodžiai nesutampa.",
+            usernameRequired: "Įveskite naudotojo vardą.",
+            ageRequired: "Įveskite savo amžių.",
+            ageInvalid: "Amžius turi būti nuo 13 iki 120 metų.",
+            signupInvalid: "Užpildykite visus laukus.",
+            accountCreated: "Paskyra sėkmingai sukurta!",
             welcome: "SVEIKI ATVYKĘ Į MOVIES TONIGHT",
             tagline: "Jūsų vieta filmams, serialams ir nepamirštamiems vakarams.",
             support: "Susisiekti su pagalba",
@@ -348,8 +416,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Войти в комнату",
             login: "Войти",
             signup: "Создать аккаунт",
+            logIn: "Войти",
+            createAccount: "Создать аккаунт",
+            welcomeBack: "С возвращением",
+            signInDescription: "Войдите в свой аккаунт Movies Tonight.",
             email: "Электронная почта",
             password: "Пароль",
+            username: "Имя пользователя",
+            age: "Возраст",
+            enterEmail: "Введите электронную почту",
+            enterPassword: "Введите пароль",
+            enterUsername: "Введите имя пользователя",
+            enterAge: "Введите свой возраст",
+            createPassword: "Создайте пароль",
+            confirmPassword: "Подтвердите пароль",
+            confirmYourPassword: "Повторите пароль",
+            backToLogin: "Вернуться ко входу",
+            creatingAccount: "Создание аккаунта...",
+            loggingIn: "Выполняется вход...",
+            passwordTooShort: "Пароль должен содержать не менее 6 символов.",
+            passwordMismatch: "Пароли не совпадают.",
+            usernameRequired: "Введите имя пользователя.",
+            ageRequired: "Введите свой возраст.",
+            ageInvalid: "Возраст должен быть от 13 до 120 лет.",
+            signupInvalid: "Заполните все поля.",
+            accountCreated: "Аккаунт успешно создан!",
             welcome: "ДОБРО ПОЖАЛОВАТЬ В MOVIES TONIGHT",
             tagline: "Ваше место для фильмов, сериалов и незабываемых вечеров.",
             support: "Связаться с поддержкой",
@@ -437,8 +528,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Приєднатися",
             login: "Увійти",
             signup: "Створити акаунт",
+            logIn: "Увійти",
+            createAccount: "Створити акаунт",
+            welcomeBack: "З поверненням",
+            signInDescription: "Увійдіть до свого акаунта Movies Tonight.",
             email: "Електронна пошта",
             password: "Пароль",
+            username: "Ім'я користувача",
+            age: "Вік",
+            enterEmail: "Введіть електронну пошту",
+            enterPassword: "Введіть пароль",
+            enterUsername: "Введіть ім'я користувача",
+            enterAge: "Введіть свій вік",
+            createPassword: "Створіть пароль",
+            confirmPassword: "Підтвердьте пароль",
+            confirmYourPassword: "Повторіть пароль",
+            backToLogin: "Повернутися до входу",
+            creatingAccount: "Створення акаунта...",
+            loggingIn: "Виконується вхід...",
+            passwordTooShort: "Пароль має містити щонайменше 6 символів.",
+            passwordMismatch: "Паролі не збігаються.",
+            usernameRequired: "Введіть ім'я користувача.",
+            ageRequired: "Введіть свій вік.",
+            ageInvalid: "Вік має бути від 13 до 120 років.",
+            signupInvalid: "Заповніть усі поля.",
+            accountCreated: "Акаунт успішно створено!",
             welcome: "ЛАСКАВО ПРОСИМО ДО MOVIES TONIGHT",
             tagline: "Ваше місце для фільмів, серіалів та незабутніх вечорів.",
             support: "Зв'язатися з підтримкою",
@@ -518,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Aparência",
             darkMode: "Modo escuro",
             autoplay: "Reprodução automática",
+            notificationSettings: "Notificações",
             searchLanguage: "🔎 Pesquisar idioma",
             typeLanguage: "Digite o nome do idioma...",
             roomCode: "Código da sala",
@@ -525,8 +640,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Entrar na sala",
             login: "Entrar",
             signup: "Criar conta",
+            logIn: "Entrar",
+            createAccount: "Criar conta",
+            welcomeBack: "Bem-vindo de volta",
+            signInDescription: "Entre na sua conta Movies Tonight.",
             email: "E-mail",
             password: "Senha",
+            username: "Nome de usuário",
+            age: "Idade",
+            enterEmail: "Digite seu e-mail",
+            enterPassword: "Digite sua senha",
+            enterUsername: "Digite seu nome de usuário",
+            enterAge: "Digite sua idade",
+            createPassword: "Crie uma senha",
+            confirmPassword: "Confirmar senha",
+            confirmYourPassword: "Confirme sua senha",
+            backToLogin: "Voltar para o login",
+            creatingAccount: "Criando conta...",
+            loggingIn: "Entrando...",
+            passwordTooShort: "A senha deve ter pelo menos 6 caracteres.",
+            passwordMismatch: "As senhas não coincidem.",
+            usernameRequired: "Digite um nome de usuário.",
+            ageRequired: "Digite sua idade.",
+            ageInvalid: "A idade deve estar entre 13 e 120 anos.",
+            signupInvalid: "Preencha todos os campos.",
+            accountCreated: "Conta criada com sucesso!",
             welcome: "BEM-VINDO AO MOVIES TONIGHT",
             tagline: "Seu lugar para filmes, séries e noites inesquecíveis.",
             support: "Entrar em contato com o suporte",
@@ -606,6 +744,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Apparence",
             darkMode: "Mode sombre",
             autoplay: "Lecture automatique",
+            notificationSettings: "Notifications",
             searchLanguage: "🔎 Rechercher une langue",
             typeLanguage: "Tapez le nom d'une langue...",
             roomCode: "Code de la salle",
@@ -613,8 +752,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Rejoindre la salle",
             login: "Connexion",
             signup: "Créer un compte",
+            logIn: "Se connecter",
+            createAccount: "Créer un compte",
+            welcomeBack: "Bon retour",
+            signInDescription: "Connectez-vous à votre compte Movies Tonight.",
             email: "E-mail",
             password: "Mot de passe",
+            username: "Nom d'utilisateur",
+            age: "Âge",
+            enterEmail: "Entrez votre e-mail",
+            enterPassword: "Entrez votre mot de passe",
+            enterUsername: "Entrez votre nom d'utilisateur",
+            enterAge: "Entrez votre âge",
+            createPassword: "Créez un mot de passe",
+            confirmPassword: "Confirmer le mot de passe",
+            confirmYourPassword: "Confirmez votre mot de passe",
+            backToLogin: "Retour à la connexion",
+            creatingAccount: "Création du compte...",
+            loggingIn: "Connexion...",
+            passwordTooShort: "Le mot de passe doit contenir au moins 6 caractères.",
+            passwordMismatch: "Les mots de passe ne correspondent pas.",
+            usernameRequired: "Veuillez entrer un nom d'utilisateur.",
+            ageRequired: "Veuillez entrer votre âge.",
+            ageInvalid: "L'âge doit être compris entre 13 et 120 ans.",
+            signupInvalid: "Veuillez remplir tous les champs.",
+            accountCreated: "Compte créé avec succès !",
             welcome: "BIENVENUE SUR MOVIES TONIGHT",
             tagline: "Votre espace pour les films, séries et soirées inoubliables.",
             support: "Contacter le support",
@@ -694,6 +856,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Apariencia",
             darkMode: "Modo oscuro",
             autoplay: "Reproducción automática",
+            notificationSettings: "Notificaciones",
             searchLanguage: "🔎 Buscar idioma",
             typeLanguage: "Escribe el nombre de un idioma...",
             roomCode: "Código de sala",
@@ -701,8 +864,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Unirse a la sala",
             login: "Iniciar sesión",
             signup: "Crear cuenta",
+            logIn: "Iniciar sesión",
+            createAccount: "Crear cuenta",
+            welcomeBack: "Bienvenido de nuevo",
+            signInDescription: "Inicia sesión en tu cuenta de Movies Tonight.",
             email: "Correo electrónico",
             password: "Contraseña",
+            username: "Nombre de usuario",
+            age: "Edad",
+            enterEmail: "Introduce tu correo electrónico",
+            enterPassword: "Introduce tu contraseña",
+            enterUsername: "Introduce tu nombre de usuario",
+            enterAge: "Introduce tu edad",
+            createPassword: "Crea una contraseña",
+            confirmPassword: "Confirmar contraseña",
+            confirmYourPassword: "Confirma tu contraseña",
+            backToLogin: "Volver al inicio de sesión",
+            creatingAccount: "Creando cuenta...",
+            loggingIn: "Iniciando sesión...",
+            passwordTooShort: "La contraseña debe tener al menos 6 caracteres.",
+            passwordMismatch: "Las contraseñas no coinciden.",
+            usernameRequired: "Introduce un nombre de usuario.",
+            ageRequired: "Introduce tu edad.",
+            ageInvalid: "La edad debe estar entre 13 y 120 años.",
+            signupInvalid: "Completa todos los campos.",
+            accountCreated: "¡Cuenta creada correctamente!",
             welcome: "BIENVENIDO A MOVIES TONIGHT",
             tagline: "Tu lugar para películas, series y noches inolvidables.",
             support: "Contactar con soporte",
@@ -782,6 +968,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Darstellung",
             darkMode: "Dunkler Modus",
             autoplay: "Automatische Wiedergabe",
+            notificationSettings: "Benachrichtigungen",
             searchLanguage: "🔎 Sprache suchen",
             typeLanguage: "Sprachnamen eingeben...",
             roomCode: "Raumcode",
@@ -789,8 +976,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Raum beitreten",
             login: "Anmelden",
             signup: "Konto erstellen",
+            logIn: "Anmelden",
+            createAccount: "Konto erstellen",
+            welcomeBack: "Willkommen zurück",
+            signInDescription: "Melde dich bei deinem Movies Tonight-Konto an.",
             email: "E-Mail",
             password: "Passwort",
+            username: "Benutzername",
+            age: "Alter",
+            enterEmail: "E-Mail eingeben",
+            enterPassword: "Passwort eingeben",
+            enterUsername: "Benutzernamen eingeben",
+            enterAge: "Alter eingeben",
+            createPassword: "Passwort erstellen",
+            confirmPassword: "Passwort bestätigen",
+            confirmYourPassword: "Passwort bestätigen",
+            backToLogin: "Zurück zur Anmeldung",
+            creatingAccount: "Konto wird erstellt...",
+            loggingIn: "Anmeldung...",
+            passwordTooShort: "Das Passwort muss mindestens 6 Zeichen enthalten.",
+            passwordMismatch: "Die Passwörter stimmen nicht überein.",
+            usernameRequired: "Bitte Benutzernamen eingeben.",
+            ageRequired: "Bitte Alter eingeben.",
+            ageInvalid: "Das Alter muss zwischen 13 und 120 Jahren liegen.",
+            signupInvalid: "Bitte alle Felder ausfüllen.",
+            accountCreated: "Konto erfolgreich erstellt!",
             welcome: "WILLKOMMEN BEI MOVIES TONIGHT",
             tagline: "Dein Ort für Filme, Serien und unvergessliche Abende.",
             support: "Support kontaktieren",
@@ -870,6 +1080,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Aspetto",
             darkMode: "Modalità scura",
             autoplay: "Riproduzione automatica",
+            notificationSettings: "Notifiche",
             searchLanguage: "🔎 Cerca lingua",
             typeLanguage: "Digita il nome di una lingua...",
             roomCode: "Codice stanza",
@@ -877,8 +1088,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Entra nella stanza",
             login: "Accedi",
             signup: "Crea account",
+            logIn: "Accedi",
+            createAccount: "Crea account",
+            welcomeBack: "Bentornato",
+            signInDescription: "Accedi al tuo account Movies Tonight.",
             email: "Email",
             password: "Password",
+            username: "Nome utente",
+            age: "Età",
+            enterEmail: "Inserisci la tua email",
+            enterPassword: "Inserisci la tua password",
+            enterUsername: "Inserisci il tuo nome utente",
+            enterAge: "Inserisci la tua età",
+            createPassword: "Crea una password",
+            confirmPassword: "Conferma password",
+            confirmYourPassword: "Conferma la tua password",
+            backToLogin: "Torna al login",
+            creatingAccount: "Creazione account...",
+            loggingIn: "Accesso...",
+            passwordTooShort: "La password deve contenere almeno 6 caratteri.",
+            passwordMismatch: "Le password non coincidono.",
+            usernameRequired: "Inserisci un nome utente.",
+            ageRequired: "Inserisci la tua età.",
+            ageInvalid: "L'età deve essere compresa tra 13 e 120 anni.",
+            signupInvalid: "Compila tutti i campi.",
+            accountCreated: "Account creato con successo!",
             welcome: "BENVENUTO SU MOVIES TONIGHT",
             tagline: "Il tuo posto per film, serie e serate indimenticabili.",
             support: "Contatta il supporto",
@@ -958,6 +1192,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appearance: "Görünüm",
             darkMode: "Karanlık Mod",
             autoplay: "Otomatik Oynatma",
+            notificationSettings: "Bildirimler",
             searchLanguage: "🔎 Dil Ara",
             typeLanguage: "Dil adı yazın...",
             roomCode: "Oda Kodu",
@@ -965,8 +1200,31 @@ document.addEventListener("DOMContentLoaded", function () {
             joinRoom: "Odaya Katıl",
             login: "Giriş Yap",
             signup: "Hesap Oluştur",
+            logIn: "Giriş Yap",
+            createAccount: "Hesap Oluştur",
+            welcomeBack: "Tekrar Hoş Geldiniz",
+            signInDescription: "Movies Tonight hesabınıza giriş yapın.",
             email: "E-posta",
             password: "Şifre",
+            username: "Kullanıcı adı",
+            age: "Yaş",
+            enterEmail: "E-postanızı girin",
+            enterPassword: "Şifrenizi girin",
+            enterUsername: "Kullanıcı adınızı girin",
+            enterAge: "Yaşınızı girin",
+            createPassword: "Bir şifre oluşturun",
+            confirmPassword: "Şifreyi Onayla",
+            confirmYourPassword: "Şifrenizi tekrar girin",
+            backToLogin: "Girişe Dön",
+            creatingAccount: "Hesap oluşturuluyor...",
+            loggingIn: "Giriş yapılıyor...",
+            passwordTooShort: "Şifre en az 6 karakter olmalıdır.",
+            passwordMismatch: "Şifreler eşleşmiyor.",
+            usernameRequired: "Lütfen kullanıcı adı girin.",
+            ageRequired: "Lütfen yaşınızı girin.",
+            ageInvalid: "Yaş 13 ile 120 arasında olmalıdır.",
+            signupInvalid: "Lütfen tüm alanları doldurun.",
+            accountCreated: "Hesap başarıyla oluşturuldu!",
             welcome: "MOVIES TONIGHT'A HOŞ GELDİNİZ",
             tagline: "Filmler, diziler ve unutulmaz geceler için yeriniz.",
             support: "Destekle İletişime Geç",
@@ -1007,34 +1265,179 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-
     /* =========================================
        LANGUAGE HELPERS
     ========================================= */
 
     const languageInfo = [
-        { value: "English", names: ["English", "الإنجليزية", "Anglais", "Englisch", "Inglese", "Inglés"] },
-        { value: "Arabic", names: ["Arabic", "العربية", "Arabe", "Arabisch", "Arabo", "Árabe"] },
-        { value: "Lithuanian", names: ["Lithuanian", "Lietuvių", "Lietuvių kalba", "Lituanien", "Litauisch", "Lituano"] },
-        { value: "Russian", names: ["Russian", "Русский", "Російська", "Russe", "Russisch", "Russo"] },
-        { value: "Ukrainian", names: ["Ukrainian", "Українська", "Ukrainien", "Ukrainisch", "Ucraino"] },
-        { value: "Portuguese", names: ["Portuguese", "Português", "Portugais", "Portugiesisch", "Português"] },
-        { value: "French", names: ["French", "Français", "Französisch", "Francese", "Francés"] },
-        { value: "Spanish", names: ["Spanish", "Español", "Espagnol", "Spanisch", "Spagnolo"] },
-        { value: "German", names: ["German", "Deutsch", "Allemand", "Tedesco", "Alemán"] },
-        { value: "Italian", names: ["Italian", "Italiano", "Italien", "Italienisch", "Italiano"] },
-        { value: "Turkish", names: ["Turkish", "Türkçe", "Turc", "Türkisch", "Turco"] },
-        { value: "Polish", names: ["Polish", "Polski", "Polonais", "Polnisch", "Polacco"] },
-        { value: "Dutch", names: ["Dutch", "Nederlands", "Néerlandais", "Niederländisch", "Olandese"] },
-        { value: "Chinese", names: ["Chinese", "中文", "Chinois", "Chinesisch", "Cinese"] },
-        { value: "Japanese", names: ["Japanese", "日本語", "Japonais", "Japanisch", "Giapponese"] },
-        { value: "Korean", names: ["Korean", "한국어", "Coréen", "Koreanisch", "Coreano"] }
+        {
+            value: "English",
+            names: [
+                "English",
+                "الإنجليزية",
+                "Anglais",
+                "Englisch",
+                "Inglese",
+                "Inglés"
+            ]
+        },
+        {
+            value: "Arabic",
+            names: [
+                "Arabic",
+                "العربية",
+                "Arabe",
+                "Arabisch",
+                "Arabo",
+                "Árabe"
+            ]
+        },
+        {
+            value: "Lithuanian",
+            names: [
+                "Lithuanian",
+                "Lietuvių",
+                "Lietuvių kalba",
+                "Lituanien",
+                "Litauisch",
+                "Lituano"
+            ]
+        },
+        {
+            value: "Russian",
+            names: [
+                "Russian",
+                "Русский",
+                "Російська",
+                "Russe",
+                "Russisch",
+                "Russo"
+            ]
+        },
+        {
+            value: "Ukrainian",
+            names: [
+                "Ukrainian",
+                "Українська",
+                "Ukrainien",
+                "Ukrainisch",
+                "Ucraino"
+            ]
+        },
+        {
+            value: "Portuguese",
+            names: [
+                "Portuguese",
+                "Português",
+                "Portugais",
+                "Portugiesisch",
+                "Português"
+            ]
+        },
+        {
+            value: "French",
+            names: [
+                "French",
+                "Français",
+                "Französisch",
+                "Francese",
+                "Francés"
+            ]
+        },
+        {
+            value: "Spanish",
+            names: [
+                "Spanish",
+                "Español",
+                "Espagnol",
+                "Spanisch",
+                "Spagnolo"
+            ]
+        },
+        {
+            value: "German",
+            names: [
+                "German",
+                "Deutsch",
+                "Allemand",
+                "Tedesco",
+                "Alemán"
+            ]
+        },
+        {
+            value: "Italian",
+            names: [
+                "Italian",
+                "Italiano",
+                "Italien",
+                "Italienisch",
+                "Italiano"
+            ]
+        },
+        {
+            value: "Turkish",
+            names: [
+                "Turkish",
+                "Türkçe",
+                "Turc",
+                "Türkisch",
+                "Turco"
+            ]
+        },
+        {
+            value: "Polish",
+            names: [
+                "Polish",
+                "Polski",
+                "Polonais",
+                "Polnisch",
+                "Polacco"
+            ]
+        },
+        {
+            value: "Dutch",
+            names: [
+                "Dutch",
+                "Nederlands",
+                "Néerlandais",
+                "Niederländisch",
+                "Olandese"
+            ]
+        },
+        {
+            value: "Chinese",
+            names: [
+                "Chinese",
+                "中文",
+                "Chinois",
+                "Chinesisch",
+                "Cinese"
+            ]
+        },
+        {
+            value: "Japanese",
+            names: [
+                "Japanese",
+                "日本語",
+                "Japonais",
+                "Japanisch",
+                "Giapponese"
+            ]
+        },
+        {
+            value: "Korean",
+            names: [
+                "Korean",
+                "한국어",
+                "Coréen",
+                "Koreanisch",
+                "Coreano"
+            ]
+        }
     ];
-
 
     let currentLanguage =
         localStorage.getItem("appLanguage") || "English";
-
 
     function t(key) {
 
@@ -1046,6 +1449,42 @@ document.addEventListener("DOMContentLoaded", function () {
             key;
     }
 
+    /* =========================================
+       ACCOUNT FORM ELEMENTS
+    ========================================= */
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+    const showSignupButton =
+        document.getElementById("showSignupButton");
+
+    const showLoginButton =
+        document.getElementById("showLoginButton");
+
+    const createAccountButton =
+        document.getElementById("createAccountButton");
+
+    const signupUsername =
+        document.getElementById("signupUsername");
+
+    const signupAge =
+        document.getElementById("signupAge");
+
+    const signupEmail =
+        document.getElementById("signupEmail");
+
+    const signupPassword =
+        document.getElementById("signupPassword");
+
+    const signupConfirmPassword =
+        document.getElementById("signupConfirmPassword");
+
+    const signupMessage =
+        document.getElementById("signupMessage");
 
     /* =========================================
        APPLY LANGUAGE
@@ -1059,49 +1498,177 @@ document.addEventListener("DOMContentLoaded", function () {
 
         currentLanguage = language;
 
-        localStorage.setItem("appLanguage", language);
-
-
-        const current =
-            translations[language] || translations.English;
-
+        localStorage.setItem(
+            "appLanguage",
+            language
+        );
 
         document.querySelectorAll("[data-i18n]").forEach(function (element) {
 
             const key =
                 element.getAttribute("data-i18n");
 
-            if (current[key]) {
-                element.textContent = current[key];
-            } else if (translations.English[key]) {
-                element.textContent = translations.English[key];
-            }
+            element.textContent =
+                t(key);
 
         });
-
 
         document.querySelectorAll("[data-i18n-placeholder]").forEach(function (element) {
 
             const key =
                 element.getAttribute("data-i18n-placeholder");
 
-            if (current[key]) {
-                element.placeholder = current[key];
-            } else if (translations.English[key]) {
-                element.placeholder = translations.English[key];
-            }
+            element.placeholder =
+                t(key);
 
         });
 
+        /* -----------------------------------------
+           SIGN UP FORM TEXT
+        ----------------------------------------- */
+
+        const signupUsernameLabel =
+            document.querySelector('label[for="signupUsername"]');
+
+        const signupAgeLabel =
+            document.querySelector('label[for="signupAge"]');
+
+        const signupEmailLabel =
+            document.querySelector('label[for="signupEmail"]');
+
+        const signupPasswordLabel =
+            document.querySelector('label[for="signupPassword"]');
+
+        const signupConfirmPasswordLabel =
+            document.querySelector('label[for="signupConfirmPassword"]');
+
+        if (signupUsernameLabel) {
+            signupUsernameLabel.textContent =
+                t("username");
+        }
+
+        if (signupAgeLabel) {
+            signupAgeLabel.textContent =
+                t("age");
+        }
+
+        if (signupEmailLabel) {
+            signupEmailLabel.textContent =
+                t("email");
+        }
+
+        if (signupPasswordLabel) {
+            signupPasswordLabel.textContent =
+                t("password");
+        }
+
+        if (signupConfirmPasswordLabel) {
+            signupConfirmPasswordLabel.textContent =
+                t("confirmPassword");
+        }
+
+        if (signupUsername) {
+            signupUsername.placeholder =
+                t("enterUsername");
+        }
+
+        if (signupAge) {
+            signupAge.placeholder =
+                t("enterAge");
+        }
+
+        if (signupEmail) {
+            signupEmail.placeholder =
+                t("enterEmail");
+        }
+
+        if (signupPassword) {
+            signupPassword.placeholder =
+                t("createPassword");
+        }
+
+        if (signupConfirmPassword) {
+            signupConfirmPassword.placeholder =
+                t("confirmYourPassword");
+        }
+
+        if (createAccountButton) {
+
+            createAccountButton.innerHTML =
+                "✨ " + t("createAccount");
+
+        }
+
+        if (showLoginButton) {
+
+            showLoginButton.innerHTML =
+                "← " + t("backToLogin");
+
+        }
+
+        const signupDescription =
+            signupForm
+                ? signupForm.querySelector("p")
+                : null;
+
+        if (signupDescription) {
+
+            if (currentLanguage === "Arabic") {
+                signupDescription.textContent =
+                    "أنشئ حسابك الخاص في Movies Tonight.";
+            } else if (currentLanguage === "Lithuanian") {
+                signupDescription.textContent =
+                    "Sukurkite savo Movies Tonight paskyrą.";
+            } else if (currentLanguage === "Russian") {
+                signupDescription.textContent =
+                    "Создайте свой аккаунт Movies Tonight.";
+            } else if (currentLanguage === "Ukrainian") {
+                signupDescription.textContent =
+                    "Створіть свій акаунт Movies Tonight.";
+            } else if (currentLanguage === "Portuguese") {
+                signupDescription.textContent =
+                    "Crie sua própria conta Movies Tonight.";
+            } else if (currentLanguage === "French") {
+                signupDescription.textContent =
+                    "Créez votre compte Movies Tonight.";
+            } else if (currentLanguage === "Spanish") {
+                signupDescription.textContent =
+                    "Crea tu propia cuenta de Movies Tonight.";
+            } else if (currentLanguage === "German") {
+                signupDescription.textContent =
+                    "Erstelle dein eigenes Movies Tonight-Konto.";
+            } else if (currentLanguage === "Italian") {
+                signupDescription.textContent =
+                    "Crea il tuo account Movies Tonight.";
+            } else if (currentLanguage === "Turkish") {
+                signupDescription.textContent =
+                    "Kendi Movies Tonight hesabınızı oluşturun.";
+            } else {
+                signupDescription.textContent =
+                    "Create your own Movies Tonight account.";
+            }
+
+        }
 
         if (language === "Arabic") {
 
-            document.documentElement.setAttribute("dir", "rtl");
-            document.documentElement.setAttribute("lang", "ar");
+            document.documentElement.setAttribute(
+                "dir",
+                "rtl"
+            );
+
+            document.documentElement.setAttribute(
+                "lang",
+                "ar"
+            );
 
         } else {
 
-            document.documentElement.setAttribute("dir", "ltr");
+            document.documentElement.setAttribute(
+                "dir",
+                "ltr"
+            );
+
             document.documentElement.setAttribute(
                 "lang",
                 language.toLowerCase()
@@ -1109,15 +1676,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-
         if (languageSelect) {
-            languageSelect.value = language;
+
+            languageSelect.value =
+                language;
+
         }
 
-
         updateThemeText();
-    }
 
+    }
 
     /* =========================================
        PAGE SYSTEM
@@ -1126,22 +1694,30 @@ document.addEventListener("DOMContentLoaded", function () {
     function showPage(pageId) {
 
         pages.forEach(function (page) {
-            page.classList.remove("active-page");
+
+            page.classList.remove(
+                "active-page"
+            );
+
         });
 
         const selectedPage =
             document.getElementById(pageId);
 
         if (selectedPage) {
-            selectedPage.classList.add("active-page");
+
+            selectedPage.classList.add(
+                "active-page"
+            );
+
         }
 
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
-    }
 
+    }
 
     /* =========================================
        ACTIVE NAVIGATION
@@ -1155,14 +1731,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.getAttribute("data-page");
 
             if (linkPage === pageId) {
+
                 link.classList.add("active");
+
             } else {
+
                 link.classList.remove("active");
+
             }
 
         });
-    }
 
+    }
 
     /* =========================================
        PROFILE
@@ -1170,51 +1750,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (profileButton && profileSection) {
 
-        profileButton.addEventListener("click", function (event) {
+        profileButton.addEventListener(
+            "click",
+            function (event) {
 
-            event.preventDefault();
-            event.stopPropagation();
+                event.preventDefault();
+                event.stopPropagation();
 
-            profileSection.classList.toggle("show");
+                profileSection.classList.toggle(
+                    "show"
+                );
 
-        });
+            }
+        );
 
     }
-
 
     if (closeProfile && profileSection) {
 
-        closeProfile.addEventListener("click", function (event) {
+        closeProfile.addEventListener(
+            "click",
+            function (event) {
 
-            event.preventDefault();
-            event.stopPropagation();
+                event.preventDefault();
+                event.stopPropagation();
 
-            profileSection.classList.remove("show");
+                profileSection.classList.remove(
+                    "show"
+                );
 
-        });
+            }
+        );
 
     }
 
+    document.addEventListener(
+        "click",
+        function (event) {
 
-    document.addEventListener("click", function (event) {
+            if (
+                !profileSection ||
+                !profileSection.classList.contains("show")
+            ) {
+                return;
+            }
 
-        if (!profileSection ||
-            !profileSection.classList.contains("show")) {
-            return;
+            if (
+                !profileSection.contains(event.target) &&
+                event.target !== profileButton &&
+                (
+                    !profileButton ||
+                    !profileButton.contains(event.target)
+                )
+            ) {
+
+                profileSection.classList.remove(
+                    "show"
+                );
+
+            }
+
         }
-
-        if (
-            !profileSection.contains(event.target) &&
-            event.target !== profileButton &&
-            (!profileButton || !profileButton.contains(event.target))
-        ) {
-
-            profileSection.classList.remove("show");
-
-        }
-
-    });
-
+    );
 
     /* =========================================
        TOP NAVIGATION
@@ -1222,24 +1819,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navLinks.forEach(function (link) {
 
-        link.addEventListener("click", function (event) {
+        link.addEventListener(
+            "click",
+            function (event) {
 
-            event.preventDefault();
+                event.preventDefault();
 
-            const pageId =
-                link.getAttribute("data-page");
+                const pageId =
+                    link.getAttribute("data-page");
 
-            if (!pageId) {
-                return;
+                if (!pageId) {
+                    return;
+                }
+
+                showPage(pageId);
+                setActiveNav(pageId);
+
             }
-
-            showPage(pageId);
-            setActiveNav(pageId);
-
-        });
+        );
 
     });
-
 
     /* =========================================
        PROFILE MENU NAVIGATION
@@ -1247,161 +1846,324 @@ document.addEventListener("DOMContentLoaded", function () {
 
     profileButtons.forEach(function (button) {
 
-        button.addEventListener("click", function () {
+        button.addEventListener(
+            "click",
+            function () {
 
-            const pageId =
-                button.getAttribute("data-profile-page");
+                const pageId =
+                    button.getAttribute(
+                        "data-profile-page"
+                    );
 
-            if (!pageId) {
-                return;
+                if (!pageId) {
+                    return;
+                }
+
+                if (profileSection) {
+
+                    profileSection.classList.remove(
+                        "show"
+                    );
+
+                }
+
+                showPage(pageId);
+
+                navLinks.forEach(function (link) {
+
+                    link.classList.remove(
+                        "active"
+                    );
+
+                });
+
             }
-
-            if (profileSection) {
-                profileSection.classList.remove("show");
-            }
-
-            showPage(pageId);
-
-            navLinks.forEach(function (link) {
-                link.classList.remove("active");
-            });
-
-        });
+        );
 
     });
-
 
     /* =========================================
        START WATCHING
     ========================================= */
 
     const startWatching =
-        document.getElementById("startWatching");
+        document.getElementById(
+            "startWatching"
+        );
 
     if (startWatching) {
 
-        startWatching.addEventListener("click", function () {
+        startWatching.addEventListener(
+            "click",
+            function () {
 
-            showPage("moviesPage");
-            setActiveNav("moviesPage");
+                showPage("moviesPage");
+                setActiveNav("moviesPage");
 
-        });
+            }
+        );
 
     }
-
 
     /* =========================================
        WATCH TOGETHER HOME
     ========================================= */
 
     const watchTogetherHome =
-        document.getElementById("watchTogetherHome");
+        document.getElementById(
+            "watchTogetherHome"
+        );
 
     if (watchTogetherHome) {
 
-        watchTogetherHome.addEventListener("click", function () {
+        watchTogetherHome.addEventListener(
+            "click",
+            function () {
 
-            showPage("togetherPage");
-            setActiveNav("togetherPage");
+                showPage("togetherPage");
+                setActiveNav("togetherPage");
 
-        });
+            }
+        );
 
     }
-
 
     /* =========================================
        CREATE ROOM
     ========================================= */
 
     const createRoom =
-        document.getElementById("createRoom");
+        document.getElementById(
+            "createRoom"
+        );
 
     const roomCode =
-        document.getElementById("roomCode");
+        document.getElementById(
+            "roomCode"
+        );
 
     const roomMessage =
-        document.getElementById("roomMessage");
+        document.getElementById(
+            "roomMessage"
+        );
 
+    if (
+        createRoom &&
+        roomCode &&
+        roomMessage
+    ) {
 
-    if (createRoom && roomCode && roomMessage) {
+        createRoom.addEventListener(
+            "click",
+            function () {
 
-        createRoom.addEventListener("click", function () {
+                const code =
+                    Math.random()
+                        .toString(36)
+                        .substring(2, 8)
+                        .toUpperCase();
 
-            const code =
-                Math.random()
-                    .toString(36)
-                    .substring(2, 8)
-                    .toUpperCase();
+                roomCode.value =
+                    code;
 
-            roomCode.value = code;
+                roomMessage.textContent =
+                    t("roomCreated") +
+                    code;
 
-            roomMessage.textContent =
-                t("roomCreated") + code;
-
-        });
+            }
+        );
 
     }
-
 
     /* =========================================
        JOIN ROOM
     ========================================= */
 
     const joinRoom =
-        document.getElementById("joinRoom");
+        document.getElementById(
+            "joinRoom"
+        );
 
-    if (joinRoom && roomCode && roomMessage) {
+    if (
+        joinRoom &&
+        roomCode &&
+        roomMessage
+    ) {
 
-        joinRoom.addEventListener("click", function () {
+        joinRoom.addEventListener(
+            "click",
+            function () {
 
-            const code =
-                roomCode.value.trim().toUpperCase();
+                const code =
+                    roomCode.value
+                        .trim()
+                        .toUpperCase();
 
-            if (code === "") {
+                if (code === "") {
+
+                    roomMessage.textContent =
+                        t("enterRoomCode");
+
+                    return;
+
+                }
 
                 roomMessage.textContent =
-                    t("enterRoomCode");
+                    t("joiningRoom") +
+                    code +
+                    "...";
 
-                return;
             }
-
-            roomMessage.textContent =
-                t("joiningRoom") + code + "...";
-
-        });
+        );
 
     }
-
 
     if (roomCode && joinRoom) {
 
-        roomCode.addEventListener("keydown", function (event) {
+        roomCode.addEventListener(
+            "keydown",
+            function (event) {
 
-            if (event.key === "Enter") {
-                joinRoom.click();
+                if (event.key === "Enter") {
+
+                    joinRoom.click();
+
+                }
+
             }
-
-        });
+        );
 
     }
 
+    /* =========================================
+       LOGIN ELEMENTS
+    ========================================= */
+
+    const loginButton =
+        document.getElementById(
+            "loginButton"
+        );
+
+    const emailInput =
+        document.getElementById(
+            "email"
+        );
+
+    const passwordInput =
+        document.getElementById(
+            "password"
+        );
+
+    const accountMessage =
+        document.getElementById(
+            "accountMessage"
+        );
+
+    /* =========================================
+       SHOW SIGNUP FORM
+    ========================================= */
+
+    if (
+        showSignupButton &&
+        loginForm &&
+        signupForm
+    ) {
+
+        showSignupButton.addEventListener(
+            "click",
+            function () {
+
+                loginForm.style.display =
+                    "none";
+
+                signupForm.style.display =
+                    "block";
+
+                if (accountMessage) {
+                    accountMessage.textContent =
+                        "";
+                }
+
+                if (signupMessage) {
+                    signupMessage.textContent =
+                        "";
+                }
+
+                if (signupUsername) {
+                    setTimeout(function () {
+                        signupUsername.focus();
+                    }, 100);
+                }
+
+            }
+        );
+
+    }
+
+    /* =========================================
+       BACK TO LOGIN
+    ========================================= */
+
+    if (
+        showLoginButton &&
+        loginForm &&
+        signupForm
+    ) {
+
+        showLoginButton.addEventListener(
+            "click",
+            function () {
+
+                signupForm.style.display =
+                    "none";
+
+                loginForm.style.display =
+                    "block";
+
+                if (signupMessage) {
+                    signupMessage.textContent =
+                        "";
+                }
+
+                if (accountMessage) {
+                    accountMessage.textContent =
+                        "";
+                }
+
+                if (signupUsername) {
+                    signupUsername.value = "";
+                }
+
+                if (signupAge) {
+                    signupAge.value = "";
+                }
+
+                if (signupEmail) {
+                    signupEmail.value = "";
+                }
+
+                if (signupPassword) {
+                    signupPassword.value = "";
+                }
+
+                if (signupConfirmPassword) {
+                    signupConfirmPassword.value = "";
+                }
+
+                if (emailInput) {
+                    setTimeout(function () {
+                        emailInput.focus();
+                    }, 100);
+                }
+
+            }
+        );
+
+    }
 
     /* =========================================
        LOGIN - SUPABASE
     ========================================= */
-
-    const loginButton =
-        document.getElementById("loginButton");
-
-    const emailInput =
-        document.getElementById("email");
-
-    const passwordInput =
-        document.getElementById("password");
-
-    const accountMessage =
-        document.getElementById("accountMessage");
-
 
     if (
         loginButton &&
@@ -1410,236 +2172,449 @@ document.addEventListener("DOMContentLoaded", function () {
         accountMessage
     ) {
 
-        loginButton.addEventListener("click", async function () {
+        loginButton.addEventListener(
+            "click",
+            async function () {
 
-            const email =
-                emailInput.value.trim();
+                const email =
+                    emailInput.value.trim();
 
-            const password =
-                passwordInput.value;
+                const password =
+                    passwordInput.value;
 
+                if (
+                    email === "" ||
+                    password === ""
+                ) {
 
-            if (email === "" || password === "") {
+                    accountMessage.textContent =
+                        t("loginRequired");
 
-                accountMessage.textContent =
-                    t("loginRequired");
+                    return;
 
-                return;
-            }
+                }
 
+                if (
+                    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+                ) {
 
-            if (!email.includes("@")) {
+                    accountMessage.textContent =
+                        t("invalidEmail");
 
-                accountMessage.textContent =
-                    t("invalidEmail");
+                    return;
 
-                return;
-            }
+                }
 
-
-            loginButton.disabled = true;
-
-            accountMessage.textContent =
-                "Logging in...";
-
-
-            const { data, error } =
-                await supabaseClient.auth.signInWithPassword({
-                    email: email,
-                    password: password
-                });
-
-
-            if (error) {
+                loginButton.disabled =
+                    true;
 
                 accountMessage.textContent =
-                    error.message;
+                    t("loggingIn");
 
-                loginButton.disabled = false;
+                const {
+                    data,
+                    error
+                } =
+                    await supabaseClient.auth.signInWithPassword({
+                        email: email,
+                        password: password
+                    });
 
-                return;
+                if (error) {
+
+                    accountMessage.textContent =
+                        error.message;
+
+                    loginButton.disabled =
+                        false;
+
+                    return;
+
+                }
+
+                if (data.session) {
+
+                    accountMessage.textContent =
+                        t("loginSuccess");
+
+                    emailInput.value =
+                        "";
+
+                    passwordInput.value =
+                        "";
+
+                    setTimeout(
+                        function () {
+
+                            showPage(
+                                "homePage"
+                            );
+
+                            setActiveNav(
+                                "homePage"
+                            );
+
+                        },
+                        800
+                    );
+
+                }
+
+                loginButton.disabled =
+                    false;
+
             }
-
-
-            if (data.session) {
-
-                accountMessage.textContent =
-                    t("loginSuccess");
-
-                emailInput.value = "";
-                passwordInput.value = "";
-
-
-                setTimeout(function () {
-
-                    showPage("homePage");
-                    setActiveNav("homePage");
-
-                }, 800);
-
-            }
-
-
-            loginButton.disabled = false;
-
-        });
+        );
 
     }
-
 
     /* =========================================
        CREATE ACCOUNT - SUPABASE
+       USERNAME + AGE + EMAIL + PASSWORD
     ========================================= */
 
-    const signupButton =
-        document.getElementById("signupButton");
+    if (
+        createAccountButton &&
+        signupUsername &&
+        signupAge &&
+        signupEmail &&
+        signupPassword &&
+        signupConfirmPassword &&
+        signupMessage
+    ) {
 
+        createAccountButton.addEventListener(
+            "click",
+            async function () {
 
-    if (signupButton && accountMessage) {
+                const username =
+                    signupUsername.value.trim();
 
-        signupButton.addEventListener("click", async function () {
+                const ageText =
+                    signupAge.value.trim();
 
-            const email =
-                emailInput.value.trim();
+                const email =
+                    signupEmail.value.trim();
 
-            const password =
-                passwordInput.value;
+                const password =
+                    signupPassword.value;
 
+                const confirmPassword =
+                    signupConfirmPassword.value;
 
-            if (email === "" || password === "") {
+                /* -----------------------------------------
+                   USERNAME CHECK
+                ----------------------------------------- */
 
-                accountMessage.textContent =
-                    t("loginRequired");
+                if (username === "") {
 
-                return;
+                    signupMessage.textContent =
+                        t("usernameRequired");
+
+                    signupUsername.focus();
+
+                    return;
+
+                }
+
+                if (
+                    username.length < 2 ||
+                    username.length > 30
+                ) {
+
+                    signupMessage.textContent =
+                        "Username must be between 2 and 30 characters.";
+
+                    signupUsername.focus();
+
+                    return;
+
+                }
+
+                /* -----------------------------------------
+                   AGE CHECK
+                ----------------------------------------- */
+
+                if (ageText === "") {
+
+                    signupMessage.textContent =
+                        t("ageRequired");
+
+                    signupAge.focus();
+
+                    return;
+
+                }
+
+                const age =
+                    Number(ageText);
+
+                if (
+                    !Number.isInteger(age) ||
+                    age < 13 ||
+                    age > 120
+                ) {
+
+                    signupMessage.textContent =
+                        t("ageInvalid");
+
+                    signupAge.focus();
+
+                    return;
+
+                }
+
+                /* -----------------------------------------
+                   EMAIL CHECK
+                ----------------------------------------- */
+
+                if (email === "") {
+
+                    signupMessage.textContent =
+                        t("invalidEmail");
+
+                    signupEmail.focus();
+
+                    return;
+
+                }
+
+                if (
+                    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+                ) {
+
+                    signupMessage.textContent =
+                        t("invalidEmail");
+
+                    signupEmail.focus();
+
+                    return;
+
+                }
+
+                /* -----------------------------------------
+                   PASSWORD CHECK
+                ----------------------------------------- */
+
+                if (password.length < 6) {
+
+                    signupMessage.textContent =
+                        t("passwordTooShort");
+
+                    signupPassword.focus();
+
+                    return;
+
+                }
+
+                /* -----------------------------------------
+                   CONFIRM PASSWORD
+                ----------------------------------------- */
+
+                if (
+                    password !== confirmPassword
+                ) {
+
+                    signupMessage.textContent =
+                        t("passwordMismatch");
+
+                    signupConfirmPassword.focus();
+
+                    return;
+
+                }
+
+                /* -----------------------------------------
+                   CREATE ACCOUNT
+                ----------------------------------------- */
+
+                createAccountButton.disabled =
+                    true;
+
+                signupMessage.textContent =
+                    t("creatingAccount");
+
+                const {
+                    data,
+                    error
+                } =
+                    await supabaseClient.auth.signUp({
+
+                        email: email,
+
+                        password: password,
+
+                        options: {
+
+                            data: {
+
+                                username: username,
+
+                                age: age
+
+                            }
+
+                        }
+
+                    });
+
+                /* -----------------------------------------
+                   ERROR
+                ----------------------------------------- */
+
+                if (error) {
+
+                    signupMessage.textContent =
+                        error.message;
+
+                    createAccountButton.disabled =
+                        false;
+
+                    return;
+
+                }
+
+                /* -----------------------------------------
+                   CLEAR PASSWORDS
+                ----------------------------------------- */
+
+                signupPassword.value =
+                    "";
+
+                signupConfirmPassword.value =
+                    "";
+
+                /* -----------------------------------------
+                   SESSION CREATED
+                ----------------------------------------- */
+
+                if (data.session) {
+
+                    signupMessage.textContent =
+                        t("signupSuccess");
+
+                    signupUsername.value =
+                        "";
+
+                    signupAge.value =
+                        "";
+
+                    signupEmail.value =
+                        "";
+
+                    setTimeout(
+                        function () {
+
+                            showPage(
+                                "homePage"
+                            );
+
+                            setActiveNav(
+                                "homePage"
+                            );
+
+                        },
+                        1000
+                    );
+
+                } else {
+
+                    /* -----------------------------------------
+                       EMAIL CONFIRMATION ENABLED
+                    ----------------------------------------- */
+
+                    signupMessage.textContent =
+                        t("confirmEmail");
+
+                }
+
+                createAccountButton.disabled =
+                    false;
+
             }
-
-
-            if (!email.includes("@")) {
-
-                accountMessage.textContent =
-                    t("invalidEmail");
-
-                return;
-            }
-
-
-            if (password.length < 6) {
-
-                accountMessage.textContent =
-                    "Password must be at least 6 characters.";
-
-                return;
-            }
-
-
-            signupButton.disabled = true;
-
-            accountMessage.textContent =
-                "Creating account...";
-
-
-            const { data, error } =
-                await supabaseClient.auth.signUp({
-                    email: email,
-                    password: password
-                });
-
-
-            if (error) {
-
-                accountMessage.textContent =
-                    error.message;
-
-                signupButton.disabled = false;
-
-                return;
-            }
-
-
-            emailInput.value = "";
-            passwordInput.value = "";
-
-
-            if (data.session) {
-
-                accountMessage.textContent =
-                    t("signupSuccess");
-
-
-                setTimeout(function () {
-
-                    showPage("homePage");
-                    setActiveNav("homePage");
-
-                }, 800);
-
-            } else {
-
-                accountMessage.textContent =
-                    t("confirmEmail");
-
-            }
-
-
-            signupButton.disabled = false;
-
-        });
+        );
 
     }
-
 
     /* =========================================
        LOG OUT - SUPABASE
     ========================================= */
 
     const profileLogout =
-        document.getElementById("profileLogout");
-
+        document.getElementById(
+            "profileLogout"
+        );
 
     if (profileLogout) {
 
-        profileLogout.addEventListener("click", async function () {
+        profileLogout.addEventListener(
+            "click",
+            async function () {
 
-            if (profileSection) {
-                profileSection.classList.remove("show");
-            }
+                if (profileSection) {
 
+                    profileSection.classList.remove(
+                        "show"
+                    );
 
-            const { error } =
-                await supabaseClient.auth.signOut();
-
-
-            if (error) {
-
-                if (accountMessage) {
-                    accountMessage.textContent =
-                        error.message;
                 }
 
-                return;
+                const {
+                    error
+                } =
+                    await supabaseClient.auth.signOut();
+
+                if (error) {
+
+                    if (accountMessage) {
+
+                        accountMessage.textContent =
+                            error.message;
+
+                    }
+
+                    return;
+
+                }
+
+                showPage(
+                    "accountPage"
+                );
+
+                navLinks.forEach(
+                    function (link) {
+
+                        link.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+                if (accountMessage) {
+
+                    accountMessage.textContent =
+                        t("loggedOut");
+
+                }
+
+                if (
+                    loginForm &&
+                    signupForm
+                ) {
+
+                    signupForm.style.display =
+                        "none";
+
+                    loginForm.style.display =
+                        "block";
+
+                }
+
             }
-
-
-            showPage("accountPage");
-
-
-            navLinks.forEach(function (link) {
-                link.classList.remove("active");
-            });
-
-
-            if (accountMessage) {
-
-                accountMessage.textContent =
-                    t("loggedOut");
-
-            }
-
-        });
+        );
 
     }
-
 
     /* =========================================
        CHECK CURRENT SESSION
@@ -1648,15 +2623,27 @@ document.addEventListener("DOMContentLoaded", function () {
     async function checkAuthSession() {
 
         const {
-            data: { session }
-        } = await supabaseClient.auth.getSession();
-
+            data: {
+                session
+            }
+        } =
+            await supabaseClient.auth.getSession();
 
         if (session) {
 
             console.log(
                 "Logged in:",
                 session.user.email
+            );
+
+            console.log(
+                "Username:",
+                session.user.user_metadata?.username
+            );
+
+            console.log(
+                "Age:",
+                session.user.user_metadata?.age
             );
 
         } else {
@@ -1669,16 +2656,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
     checkAuthSession();
-
 
     /* =========================================
        AUTH STATE LISTENER
     ========================================= */
 
     supabaseClient.auth.onAuthStateChange(
-        function (event, session) {
+        function (
+            event,
+            session
+        ) {
 
             if (session) {
 
@@ -1698,14 +2686,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     );
 
-
     /* =========================================
        THEME SYSTEM
     ========================================= */
 
     const themeToggle =
-        document.getElementById("themeToggle");
-
+        document.getElementById(
+            "themeToggle"
+        );
 
     function applyTheme(isDark) {
 
@@ -1716,16 +2704,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.setItem(
             "theme",
-            isDark ? "dark" : "light"
+            isDark
+                ? "dark"
+                : "light"
         );
 
-
         if (themeToggle) {
-            themeToggle.checked = isDark;
+
+            themeToggle.checked =
+                isDark;
+
         }
 
     }
-
 
     function updateThemeText() {
 
@@ -1741,20 +2732,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const textElement =
-            label.querySelector("[data-i18n]");
+            label.querySelector(
+                "[data-i18n]"
+            );
 
         if (textElement) {
-            textElement.textContent = t("darkMode");
+
+            textElement.textContent =
+                t("darkMode");
+
         }
 
     }
 
-
     const savedTheme =
-        localStorage.getItem("theme");
+        localStorage.getItem(
+            "theme"
+        );
 
-
-    if (savedTheme === "light") {
+    if (
+        savedTheme === "light"
+    ) {
 
         applyTheme(false);
 
@@ -1764,266 +2762,338 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
     if (themeToggle) {
 
-        themeToggle.addEventListener("change", function () {
+        themeToggle.addEventListener(
+            "change",
+            function () {
 
-            applyTheme(themeToggle.checked);
+                applyTheme(
+                    themeToggle.checked
+                );
 
-        });
+            }
+        );
 
     }
-
 
     /* =========================================
        SETTINGS
     ========================================= */
 
     const saveSettings =
-        document.getElementById("saveSettings");
+        document.getElementById(
+            "saveSettings"
+        );
 
     const settingsMessage =
-        document.getElementById("settingsMessage");
+        document.getElementById(
+            "settingsMessage"
+        );
 
+    if (
+        saveSettings &&
+        settingsMessage
+    ) {
 
-    if (saveSettings && settingsMessage) {
+        saveSettings.addEventListener(
+            "click",
+            function () {
 
-        saveSettings.addEventListener("click", function () {
+                settingsMessage.textContent =
+                    t("settingsSaved");
 
-            settingsMessage.textContent =
-                t("settingsSaved");
-
-        });
+            }
+        );
 
     }
-
 
     /* =========================================
        LANGUAGE SETTINGS
     ========================================= */
 
     const saveLanguage =
-        document.getElementById("saveLanguage");
+        document.getElementById(
+            "saveLanguage"
+        );
 
     const languageSelect =
-        document.getElementById("languageSelect");
+        document.getElementById(
+            "languageSelect"
+        );
 
     const subtitleSelect =
-        document.getElementById("subtitleSelect");
+        document.getElementById(
+            "subtitleSelect"
+        );
 
     const audioSelect =
-        document.getElementById("audioSelect");
+        document.getElementById(
+            "audioSelect"
+        );
 
     const languageMessage =
-        document.getElementById("languageMessage");
-
+        document.getElementById(
+            "languageMessage"
+        );
 
     if (languageSelect) {
 
-        languageSelect.addEventListener("change", function () {
-
-            applyLanguage(
-                languageSelect.value
-            );
-
-        });
-
-    }
-
-
-    if (saveLanguage) {
-
-        saveLanguage.addEventListener("click", function () {
-
-            if (languageSelect) {
-
-                localStorage.setItem(
-                    "appLanguage",
-                    languageSelect.value
-                );
+        languageSelect.addEventListener(
+            "change",
+            function () {
 
                 applyLanguage(
                     languageSelect.value
                 );
 
             }
-
-
-            if (subtitleSelect) {
-
-                localStorage.setItem(
-                    "subtitleLanguage",
-                    subtitleSelect.value
-                );
-
-            }
-
-
-            if (audioSelect) {
-
-                localStorage.setItem(
-                    "audioLanguage",
-                    audioSelect.value
-                );
-
-            }
-
-
-            if (languageMessage) {
-
-                languageMessage.textContent =
-                    t("preferencesSaved");
-
-            }
-
-        });
+        );
 
     }
 
+    if (saveLanguage) {
+
+        saveLanguage.addEventListener(
+            "click",
+            function () {
+
+                if (languageSelect) {
+
+                    localStorage.setItem(
+                        "appLanguage",
+                        languageSelect.value
+                    );
+
+                    applyLanguage(
+                        languageSelect.value
+                    );
+
+                }
+
+                if (subtitleSelect) {
+
+                    localStorage.setItem(
+                        "subtitleLanguage",
+                        subtitleSelect.value
+                    );
+
+                }
+
+                if (audioSelect) {
+
+                    localStorage.setItem(
+                        "audioLanguage",
+                        audioSelect.value
+                    );
+
+                }
+
+                if (languageMessage) {
+
+                    languageMessage.textContent =
+                        t("preferencesSaved");
+
+                }
+
+            }
+        );
+
+    }
 
     /* =========================================
        LOAD SAVED LANGUAGE SETTINGS
     ========================================= */
 
     const savedLanguage =
-        localStorage.getItem("appLanguage");
+        localStorage.getItem(
+            "appLanguage"
+        );
 
     const savedSubtitle =
-        localStorage.getItem("subtitleLanguage");
+        localStorage.getItem(
+            "subtitleLanguage"
+        );
 
     const savedAudio =
-        localStorage.getItem("audioLanguage");
+        localStorage.getItem(
+            "audioLanguage"
+        );
 
-
-    if (languageSelect && savedLanguage) {
+    if (
+        languageSelect &&
+        savedLanguage
+    ) {
 
         const languageExists =
-            Array.from(languageSelect.options)
-                .some(function (option) {
-                    return option.value === savedLanguage;
-                });
+            Array.from(
+                languageSelect.options
+            ).some(
+                function (option) {
+
+                    return option.value ===
+                        savedLanguage;
+
+                }
+            );
 
         if (languageExists) {
-            languageSelect.value = savedLanguage;
+
+            languageSelect.value =
+                savedLanguage;
+
         }
 
     }
 
+    if (
+        subtitleSelect &&
+        savedSubtitle
+    ) {
 
-    if (subtitleSelect && savedSubtitle) {
-        subtitleSelect.value = savedSubtitle;
+        subtitleSelect.value =
+            savedSubtitle;
+
     }
 
+    if (
+        audioSelect &&
+        savedAudio
+    ) {
 
-    if (audioSelect && savedAudio) {
-        audioSelect.value = savedAudio;
+        audioSelect.value =
+            savedAudio;
+
     }
-
 
     /* =========================================
        LANGUAGE SEARCH
     ========================================= */
 
     const languageSearch =
-        document.getElementById("languageSearch");
+        document.getElementById(
+            "languageSearch"
+        );
 
     const languageSearchResults =
-        document.getElementById("languageSearchResults");
+        document.getElementById(
+            "languageSearchResults"
+        );
 
+    function renderLanguageResults(
+        searchText
+    ) {
 
-    function renderLanguageResults(searchText) {
+        if (
+            !languageSearchResults ||
+            !languageSelect
+        ) {
 
-        if (!languageSearchResults ||
-            !languageSelect) {
             return;
+
         }
 
-
-        languageSearchResults.innerHTML = "";
-
+        languageSearchResults.innerHTML =
+            "";
 
         const query =
-            searchText.trim().toLowerCase();
-
+            searchText
+                .trim()
+                .toLowerCase();
 
         if (query === "") {
             return;
         }
 
-
         const results =
-            languageInfo.filter(function (item) {
+            languageInfo.filter(
+                function (item) {
 
-                return item.names.some(function (name) {
+                    return item.names.some(
+                        function (name) {
 
-                    return name
-                        .toLowerCase()
-                        .includes(query);
+                            return name
+                                .toLowerCase()
+                                .includes(query);
 
-                });
+                        }
+                    );
 
-            });
+                }
+            );
 
+        results.forEach(
+            function (item) {
 
-        results.forEach(function (item) {
+                const button =
+                    document.createElement(
+                        "button"
+                    );
 
-            const button =
-                document.createElement("button");
+                button.type =
+                    "button";
 
-            button.type = "button";
-
-
-            const nativeName =
-                item.names[1] || item.value;
-
-
-            button.textContent =
-                item.value === "Lithuanian"
-                    ? "Lietuvių — Lithuanian"
-                    : nativeName + " — " + item.value;
-
-
-            button.addEventListener("click", function () {
-
-                languageSelect.value =
+                const nativeName =
+                    item.names[1] ||
                     item.value;
 
-                applyLanguage(
-                    item.value
+                button.textContent =
+                    item.value === "Lithuanian"
+                        ? "Lietuvių — Lithuanian"
+                        : nativeName +
+                          " — " +
+                          item.value;
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        languageSelect.value =
+                            item.value;
+
+                        applyLanguage(
+                            item.value
+                        );
+
+                        languageSearch.value =
+                            nativeName;
+
+                        languageSearchResults.innerHTML =
+                            "";
+
+                    }
                 );
 
-                languageSearch.value =
-                    nativeName;
+                languageSearchResults.appendChild(
+                    button
+                );
 
-                languageSearchResults.innerHTML =
-                    "";
-
-            });
-
-
-            languageSearchResults.appendChild(button);
-
-        });
-
+            }
+        );
 
         if (results.length === 0) {
 
             const noResult =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
             noResult.textContent =
                 "No language found.";
 
-            noResult.style.padding = "8px";
-            noResult.style.color = "var(--text-muted)";
+            noResult.style.padding =
+                "8px";
 
-            languageSearchResults.appendChild(noResult);
+            noResult.style.color =
+                "var(--text-muted)";
+
+            languageSearchResults.appendChild(
+                noResult
+            );
 
         }
 
     }
-
 
     if (languageSearch) {
 
@@ -2040,203 +3110,248 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
     /* =========================================
        BACK BUTTONS
     ========================================= */
 
     const backButtons =
-        document.querySelectorAll("[data-back]");
+        document.querySelectorAll(
+            "[data-back]"
+        );
 
+    backButtons.forEach(
+        function (button) {
 
-    backButtons.forEach(function (button) {
+            button.addEventListener(
+                "click",
+                function () {
 
-        button.addEventListener("click", function () {
+                    const pageId =
+                        button.getAttribute(
+                            "data-back"
+                        );
 
-            const pageId =
-                button.getAttribute("data-back");
+                    if (!pageId) {
+                        return;
+                    }
 
-            if (!pageId) {
-                return;
-            }
+                    showPage(pageId);
+                    setActiveNav(pageId);
 
-            showPage(pageId);
-            setActiveNav(pageId);
+                }
+            );
 
-        });
-
-    });
-
+        }
+    );
 
     /* =========================================
        HELP / SUPPORT
     ========================================= */
 
     const contactSupport =
-        document.getElementById("contactSupport");
-
+        document.getElementById(
+            "contactSupport"
+        );
 
     if (contactSupport) {
 
-        contactSupport.addEventListener("click", function () {
+        contactSupport.addEventListener(
+            "click",
+            function () {
 
-            alert(
-                t("supportSoon")
-            );
+                alert(
+                    t("supportSoon")
+                );
 
-        });
+            }
+        );
 
     }
-
 
     /* =========================================
        DELETE ACCOUNT
     ========================================= */
 
     const confirmDelete =
-        document.getElementById("confirmDelete");
+        document.getElementById(
+            "confirmDelete"
+        );
 
     const deleteMessage =
-        document.getElementById("deleteMessage");
+        document.getElementById(
+            "deleteMessage"
+        );
 
+    if (
+        confirmDelete &&
+        deleteMessage
+    ) {
 
-    if (confirmDelete && deleteMessage) {
+        confirmDelete.addEventListener(
+            "click",
+            function () {
 
-        confirmDelete.addEventListener("click", function () {
+                const confirmed =
+                    confirm(
+                        t("deleteConfirm")
+                    );
 
-            const confirmed =
-                confirm(
-                    t("deleteConfirm")
-                );
+                if (confirmed) {
 
+                    deleteMessage.textContent =
+                        t("deleteSubmitted");
 
-            if (confirmed) {
-
-                deleteMessage.textContent =
-                    t("deleteSubmitted");
+                }
 
             }
-
-        });
+        );
 
     }
-
 
     /* =========================================
        SEARCH MOVIES
     ========================================= */
 
     const searchInput =
-        document.getElementById("searchInput");
-
+        document.getElementById(
+            "searchInput"
+        );
 
     if (searchInput) {
 
-        searchInput.addEventListener("input", function () {
+        searchInput.addEventListener(
+            "input",
+            function () {
 
-            const searchText =
-                searchInput.value
-                    .trim()
-                    .toLowerCase();
-
-
-            const movieCards =
-                document.querySelectorAll(".movie-card");
-
-
-            movieCards.forEach(function (card) {
-
-                const titleElement =
-                    card.querySelector("h3");
-
-
-                if (!titleElement) {
-                    return;
-                }
-
-
-                const title =
-                    titleElement.textContent
+                const searchText =
+                    searchInput.value
+                        .trim()
                         .toLowerCase();
 
+                const movieCards =
+                    document.querySelectorAll(
+                        ".movie-card"
+                    );
 
-                if (title.includes(searchText)) {
+                movieCards.forEach(
+                    function (card) {
 
-                    card.style.display = "";
+                        const titleElement =
+                            card.querySelector(
+                                "h3"
+                            );
 
-                } else {
+                        if (!titleElement) {
+                            return;
+                        }
 
-                    card.style.display = "none";
+                        const title =
+                            titleElement
+                                .textContent
+                                .toLowerCase();
 
-                }
+                        if (
+                            title.includes(
+                                searchText
+                            )
+                        ) {
 
-            });
+                            card.style.display =
+                                "";
 
-        });
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
 
     }
-
 
     /* =========================================
        MOVIE PLAY BUTTONS
     ========================================= */
 
     const moviePlayButtons =
-        document.querySelectorAll(".movie-hover button");
+        document.querySelectorAll(
+            ".movie-hover button"
+        );
 
+    moviePlayButtons.forEach(
+        function (button) {
 
-    moviePlayButtons.forEach(function (button) {
+            button.addEventListener(
+                "click",
+                function (event) {
 
-        button.addEventListener("click", function (event) {
+                    event.stopPropagation();
 
-            event.stopPropagation();
+                    alert(
+                        t("playbackSoon")
+                    );
 
-            alert(
-                t("playbackSoon")
+                }
             );
 
-        });
-
-    });
-
+        }
+    );
 
     /* =========================================
        VIEW ALL
     ========================================= */
 
     const viewAllButtons =
-        document.querySelectorAll(".view-all-button");
+        document.querySelectorAll(
+            ".view-all-button"
+        );
 
+    viewAllButtons.forEach(
+        function (button) {
 
-    viewAllButtons.forEach(function (button) {
+            button.addEventListener(
+                "click",
+                function () {
 
-        button.addEventListener("click", function () {
+                    alert(
+                        t("moreMoviesSoon")
+                    );
 
-            alert(
-                t("moreMoviesSoon")
+                }
             );
 
-        });
-
-    });
-
+        }
+    );
 
     /* =========================================
        ESC KEY
     ========================================= */
 
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener(
+        "keydown",
+        function (event) {
 
-        if (event.key === "Escape") {
+            if (
+                event.key === "Escape"
+            ) {
 
-            if (profileSection) {
-                profileSection.classList.remove("show");
+                if (profileSection) {
+
+                    profileSection.classList.remove(
+                        "show"
+                    );
+
+                }
+
             }
 
         }
-
-    });
-
+    );
 
     /* =========================================
        INITIAL LANGUAGE
@@ -2245,7 +3360,6 @@ document.addEventListener("DOMContentLoaded", function () {
     applyLanguage(
         savedLanguage || "English"
     );
-
 
     console.log(
         "MOVIES TONIGHT loaded successfully."
