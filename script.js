@@ -1,4 +1,4 @@
-const SUPABASE_URL = "ضع Project URL هنا";
+const SUPABASE_URL = "https://eoljotwalafeoammucqy.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "ضع Publishable key هنا";
 
 const supabaseClient = supabase.createClient(
