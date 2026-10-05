@@ -1,3 +1,10 @@
+const SUPABASE_URL = "ضع Project URL هنا";
+const SUPABASE_PUBLISHABLE_KEY = "ضع Publishable key هنا";
+
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+);
 /* =========================================
    MOVIES TONIGHT
    MAIN JAVASCRIPT
