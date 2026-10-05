@@ -1046,43 +1046,194 @@
             YOUR ACCOUNT
         </span>
 
-        <h1 data-i18n="welcomeBack">Welcome Back</h1>
 
-        <p data-i18n="signInDescription">
-            Sign in to your Movies Tonight account.
-        </p>
+        <!-- ================= LOGIN FORM ================= -->
 
-        <div class="account-box">
+        <div id="loginForm">
 
-            <label for="email" data-i18n="email">Email</label>
+            <h1 data-i18n="welcomeBack">
+                Welcome Back
+            </h1>
 
-            <input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-                data-i18n-placeholder="enterEmail"
-                autocomplete="email"
-            >
+            <p data-i18n="signInDescription">
+                Sign in to your Movies Tonight account.
+            </p>
 
-            <label for="password" data-i18n="password">Password</label>
+            <div class="account-box">
 
-            <input
-                id="password"
-                type="password"
-                placeholder="Enter your password"
-                data-i18n-placeholder="enterPassword"
-                autocomplete="current-password"
-            >
+                <label for="email" data-i18n="email">
+                    Email
+                </label>
 
-            <button class="main-button full-button" id="loginButton" type="button">
-                <span data-i18n="logIn">Log In</span>
-            </button>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    data-i18n-placeholder="enterEmail"
+                    autocomplete="email"
+                >
 
-            <button class="secondary-button full-button" id="signupButton" type="button">
-                <span data-i18n="createAccount">Create Account</span>
-            </button>
 
-            <p id="accountMessage" class="message"></p>
+                <label for="password" data-i18n="password">
+                    Password
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    data-i18n-placeholder="enterPassword"
+                    autocomplete="current-password"
+                >
+
+
+                <button
+                    class="main-button full-button"
+                    id="loginButton"
+                    type="button"
+                >
+                    <span data-i18n="logIn">
+                        Log In
+                    </span>
+                </button>
+
+
+                <button
+                    class="secondary-button full-button"
+                    id="showSignupButton"
+                    type="button"
+                >
+                    <span data-i18n="createAccount">
+                        Create Account
+                    </span>
+                </button>
+
+
+                <p id="accountMessage" class="message"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CREATE ACCOUNT FORM ================= -->
+
+        <div
+            id="signupForm"
+            style="display: none;"
+        >
+
+            <h1 data-i18n="createAccount">
+                Create Account
+            </h1>
+
+            <p>
+                Create your own Movies Tonight account.
+            </p>
+
+
+            <div class="account-box">
+
+                <!-- USERNAME -->
+
+                <label for="signupUsername">
+                    Username
+                </label>
+
+                <input
+                    id="signupUsername"
+                    type="text"
+                    placeholder="Enter your username"
+                    maxlength="30"
+                    autocomplete="username"
+                >
+
+
+                <!-- AGE -->
+
+                <label for="signupAge">
+                    Age
+                </label>
+
+                <input
+                    id="signupAge"
+                    type="number"
+                    placeholder="Enter your age"
+                    min="13"
+                    max="120"
+                    inputmode="numeric"
+                >
+
+
+                <!-- EMAIL -->
+
+                <label for="signupEmail">
+                    Email
+                </label>
+
+                <input
+                    id="signupEmail"
+                    type="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                >
+
+
+                <!-- PASSWORD -->
+
+                <label for="signupPassword">
+                    Password
+                </label>
+
+                <input
+                    id="signupPassword"
+                    type="password"
+                    placeholder="Create a password"
+                    minlength="6"
+                    autocomplete="new-password"
+                >
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <label for="signupConfirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    id="signupConfirmPassword"
+                    type="password"
+                    placeholder="Confirm your password"
+                    minlength="6"
+                    autocomplete="new-password"
+                >
+
+
+                <!-- CREATE -->
+
+                <button
+                    class="main-button full-button"
+                    id="createAccountButton"
+                    type="button"
+                >
+                    ✨ Create Account
+                </button>
+
+
+                <!-- BACK -->
+
+                <button
+                    class="secondary-button full-button"
+                    id="showLoginButton"
+                    type="button"
+                >
+                    ← Back to Login
+                </button>
+
+
+                <p id="signupMessage" class="message"></p>
+
+            </div>
 
         </div>
 
@@ -2038,7 +2189,13 @@
 
 </footer>
 
+
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="script.js"></script>
 
 </body>
